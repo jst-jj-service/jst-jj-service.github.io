@@ -117,22 +117,22 @@ document.addEventListener('DOMContentLoaded', () => {
     '0.21': {
       multiplier: 0.21,
       name: 'Starter Pool (0.21x)',
-      description: 'gpt-4o-mini'
+      description: 'Promotional Quota Tier'
     },
     '0.32': {
       multiplier: 0.32,
       name: 'Plus Pool (0.32x)',
-      description: 'gpt-4o, chatgpt-4o-latest'
+      description: 'Plus Development Tier'
     },
     '0.5': {
       multiplier: 0.50,
       name: 'Pro Reasoning Pool (0.50x)',
-      description: 'o1-mini, o1-preview'
+      description: 'Sol Reasoning Model'
     },
     '0.75': {
       multiplier: 0.75,
       name: 'Flagship Pro Pool (0.75x)',
-      description: 'o1, o3-mini'
+      description: 'Astra Flagship Model'
     }
   };
 
