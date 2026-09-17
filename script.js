@@ -1,7 +1,7 @@
 /**
  * AI Gateway — Interactive Promotional Landing Page Script
  * Featuring Exact Promotional Pools (0.21x, 0.32x, 0.50x, 0.75x, Claude Pools)
- * and Frontier Models: GPT-6 Astra & Claude Fable 5.1
+ * Real Frontier Models: OpenAI o1, o3-mini, GPT-4o, Claude 3.5 Sonnet v2, Opus 5
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -129,41 +129,35 @@ document.addEventListener('DOMContentLoaded', () => {
       group: 'GPT Pro 专业｜0.50x',
       modelName: 'OpenAI o1-preview'
     },
-    'gpt-6-astra': {
-      official: 20.00,
-      multiplier: 0.75,
-      group: 'GPT Pro 尊享旗舰｜0.75x',
-      modelName: 'GPT-6 Astra (OpenAI Frontier)'
-    },
     'o1-flagship': {
       official: 30.00,
       multiplier: 0.75,
       group: 'GPT Pro 尊享旗舰｜0.75x',
-      modelName: 'OpenAI o1 Flagship'
+      modelName: 'OpenAI o1 Flagship (0.75x)'
     },
     'o3-mini': {
       official: 4.00,
       multiplier: 0.75,
       group: 'GPT Pro 尊享旗舰｜0.75x',
-      modelName: 'OpenAI o3-mini'
-    },
-    'claude-fable': {
-      official: 15.00,
-      multiplier: 0.35,
-      group: 'Claude Fable & Opus',
-      modelName: 'Claude Fable 5.1 (Anthropic Frontier)'
+      modelName: 'OpenAI o3-mini (0.75x)'
     },
     'claude-3-5-sonnet': {
       official: 9.00,
       multiplier: 0.35,
-      group: 'Claude Fable & Opus',
+      group: 'Claude & Opus 5',
       modelName: 'Claude 3.5 Sonnet v2'
+    },
+    'claude-opus-5': {
+      official: 15.00,
+      multiplier: 0.35,
+      group: 'Claude & Opus 5',
+      modelName: 'Claude Opus 5'
     },
     'claude-max': {
       official: 15.00,
       multiplier: 1.60,
       group: 'Claude Max 尊享专线｜1.6x',
-      modelName: 'Claude Fable / Sonnet Max (Dedicated)'
+      modelName: 'Claude 3.5 Sonnet Max (Dedicated)'
     }
   };
 
@@ -172,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const millionTokens = Math.max(0.1, parseFloat(calcTokensInput.value) || 1);
     const selectedKey = calcTierSelect.value;
-    const tierData = TIER_RATES[selectedKey] || TIER_RATES['gpt-6-astra'];
+    const tierData = TIER_RATES[selectedKey] || TIER_RATES['gpt-4o'];
 
     const officialCost = millionTokens * tierData.official;
     const gatewayCost = officialCost * tierData.multiplier;
