@@ -78,9 +78,10 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: min(1280px, 94vw);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 clamp(16px, 3vw, 32px);
   position: relative;
   z-index: 1;
 }
@@ -810,80 +811,224 @@ h1, h2, h3, h4 {
 /* Responsive */
 @media (max-width: 900px) {
   .nav-links { display: none; }
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 12, 20, 0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 24px;
+    gap: 20px;
+    z-index: 99;
+  }
   .bento-span-4, .bento-span-6, .bento-span-8 { grid-column: span 12; }
   .calc-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 
 @media (max-width: 600px) {
+  .hero-title { font-size: clamp(2rem, 7vw, 2.75rem); }
   .hero-actions { flex-direction: column; width: 100%; }
   .hero-actions .btn { width: 100%; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .base-url-bar { flex-direction: column; align-items: flex-start; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .base-url-bar { flex-direction: column; align-items: stretch; gap: 12px; }
+  .base-url-bar .btn { width: 100%; }
+  .pricing-tabs { width: 100%; overflow-x: auto; flex-wrap: nowrap; }
 }
 
-/* Quota Packages Grid */
-.packages-grid {
+@media (min-width: 1800px) {
+  .container { max-width: 1500px; }
+  .hero-title { font-size: 4rem; }
+  .hero-subtitle { font-size: 1.35rem; max-width: 800px; }
+}
+
+/* Pools Grid */
+.pools-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 24px;
-  margin-bottom: 56px;
+  margin-bottom: 48px;
 }
 
-.package-card {
+.pool-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 20px;
-  padding: 36px 24px;
-  text-align: center;
+  padding: 32px 24px;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(12px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.package-card:hover {
+.pool-card:hover {
   border-color: rgba(99, 102, 241, 0.5);
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
-.package-card.popular {
+.pool-card.featured {
   border-color: rgba(99, 102, 241, 0.6);
-  background: rgba(99, 102, 241, 0.08);
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.12) 0%, rgba(17, 24, 39, 0.85) 100%);
   box-shadow: 0 8px 32px rgba(99, 102, 241, 0.25);
 }
 
-.package-badge-top {
+.pool-badge-top {
   position: absolute;
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.package-tokens {
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--text-main);
-  margin: 12px 0 6px;
+.pool-rate-box {
+  margin: 16px 0 12px;
 }
 
-.package-features {
+.pool-multiplier {
+  font-size: clamp(2.2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  font-family: var(--font-mono);
+  line-height: 1.1;
+  color: var(--text-main);
+}
+
+.pool-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  min-height: 42px;
+  margin-bottom: 20px;
+}
+
+.pool-models-title {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+
+.pool-models-list {
   list-style: none;
-  text-align: left;
-  margin: 24px 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.pool-models-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.9rem;
   color: var(--text-muted);
 }
 
-.package-features li {
+.pool-models-list li code {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #c7d2fe;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Coming Soon Banner */
+.coming-soon-banner {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(6, 182, 212, 0.08) 100%);
+  border: 1px dashed rgba(139, 92, 246, 0.35);
+  border-radius: 18px;
+  padding: 28px 32px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 64px;
+  flex-wrap: wrap;
 }
+
+.coming-soon-badge {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c084fc;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* How It Works Workflow Steps */
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.workflow-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 28px 22px;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.workflow-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.workflow-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--primary-light);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+}
+
+.workflow-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.workflow-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+/* Mobile Nav Toggle Button */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+}
+
 
