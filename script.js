@@ -1,6 +1,7 @@
 /**
  * AI Gateway — Interactive Promotional Landing Page Script
- * Featuring 6 Exact Upstream Tiers and New OpenAI & Anthropic Claude Models
+ * Featuring Exact Promotional Pools (0.21x, 0.32x, 0.50x, 0.75x, Claude Pools)
+ * and Frontier Models: GPT-6 Astra & Claude Fable 5.1
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -50,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Pricing Filter Tabs (6 Groups: welfare, opus, plus, pro, pro-vip, claude-max)
+  // 3. Pricing Filter Tabs
   const pricingTabs = document.querySelectorAll('.pricing-tab-btn');
   const pricingRows = document.querySelectorAll('.pricing-row');
 
@@ -89,80 +90,80 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Interactive Token Cost Calculator with 6 Specific Groups
+  // 5. Interactive Token Cost Calculator with Updated Promotional Pools
   const calcTokensInput = document.getElementById('calcTokens');
   const calcTierSelect = document.getElementById('calcTier');
   const calcPriceDisplay = document.getElementById('calcPrice');
   const calcOfficialDisplay = document.getElementById('calcOfficialPrice');
   const calcSavingsDisplay = document.getElementById('calcSavings');
 
-  // Exact 6 Tiers with base official rates per 1M tokens ($USD) and multipliers
+  // Exact Promotional Pools & Multipliers requested by user
   const TIER_RATES = {
     'gpt-4o-mini': {
       official: 0.30,
       multiplier: 0.21,
-      group: 'GPT 福利｜0.21x',
-      modelName: 'GPT-4o Mini'
-    },
-    'claude-3-5-sonnet': {
-      official: 9.00,
-      multiplier: 0.13,
-      group: 'Opus 5｜0.13x',
-      modelName: 'Claude 3.5 Sonnet (v2)'
-    },
-    'claude-3-5-haiku': {
-      official: 2.00,
-      multiplier: 0.13,
-      group: 'Opus 5｜0.13x',
-      modelName: 'Claude 3.5 Haiku'
-    },
-    'claude-opus-5': {
-      official: 45.00,
-      multiplier: 0.13,
-      group: 'Opus 5｜0.13x',
-      modelName: 'Claude Opus 5'
+      group: 'GPT 尝鲜特惠｜0.21x',
+      modelName: 'GPT-4o Mini (0.21x Promo)'
     },
     'gpt-4o': {
       official: 5.00,
-      multiplier: 0.16,
-      group: 'GPT Plus｜0.16x',
-      modelName: 'GPT-4o'
+      multiplier: 0.32,
+      group: 'GPT Plus 进阶｜0.32x',
+      modelName: 'GPT-4o (0.32x Plus)'
     },
     'chatgpt-4o-latest': {
       official: 7.50,
-      multiplier: 0.16,
-      group: 'GPT Plus｜0.16x',
+      multiplier: 0.32,
+      group: 'GPT Plus 进阶｜0.32x',
       modelName: 'ChatGPT-4o Latest'
     },
     'o1-mini': {
       official: 6.00,
-      multiplier: 0.20,
-      group: 'GPT Pro｜0.20x',
-      modelName: 'OpenAI o1-mini'
+      multiplier: 0.50,
+      group: 'GPT Pro 专业｜0.50x',
+      modelName: 'OpenAI o1-mini (0.50x Pro)'
     },
     'o1-preview': {
       official: 30.00,
-      multiplier: 0.20,
-      group: 'GPT Pro｜0.20x',
+      multiplier: 0.50,
+      group: 'GPT Pro 专业｜0.50x',
       modelName: 'OpenAI o1-preview'
+    },
+    'gpt-6-astra': {
+      official: 20.00,
+      multiplier: 0.75,
+      group: 'GPT Pro 尊享旗舰｜0.75x',
+      modelName: 'GPT-6 Astra (OpenAI Frontier)'
     },
     'o1-flagship': {
       official: 30.00,
-      multiplier: 0.30,
-      group: 'GPT Pro尊享｜0.30x',
+      multiplier: 0.75,
+      group: 'GPT Pro 尊享旗舰｜0.75x',
       modelName: 'OpenAI o1 Flagship'
     },
     'o3-mini': {
       official: 4.00,
-      multiplier: 0.30,
-      group: 'GPT Pro尊享｜0.30x',
+      multiplier: 0.75,
+      group: 'GPT Pro 尊享旗舰｜0.75x',
       modelName: 'OpenAI o3-mini'
     },
-    'claude-max': {
+    'claude-fable': {
+      official: 15.00,
+      multiplier: 0.35,
+      group: 'Claude Fable & Opus',
+      modelName: 'Claude Fable 5.1 (Anthropic Frontier)'
+    },
+    'claude-3-5-sonnet': {
       official: 9.00,
+      multiplier: 0.35,
+      group: 'Claude Fable & Opus',
+      modelName: 'Claude 3.5 Sonnet v2'
+    },
+    'claude-max': {
+      official: 15.00,
       multiplier: 1.60,
-      group: 'Claude Max｜1.6x',
-      modelName: 'Claude 3.5 Sonnet Max'
+      group: 'Claude Max 尊享专线｜1.6x',
+      modelName: 'Claude Fable / Sonnet Max (Dedicated)'
     }
   };
 
@@ -171,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const millionTokens = Math.max(0.1, parseFloat(calcTokensInput.value) || 1);
     const selectedKey = calcTierSelect.value;
-    const tierData = TIER_RATES[selectedKey] || TIER_RATES['claude-3-5-sonnet'];
+    const tierData = TIER_RATES[selectedKey] || TIER_RATES['gpt-6-astra'];
 
     const officialCost = millionTokens * tierData.official;
     const gatewayCost = officialCost * tierData.multiplier;
@@ -183,10 +184,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (calcSavingsDisplay) {
       if (tierData.multiplier < 1) {
-        calcSavingsDisplay.textContent = `Save ${savingsPercent}% vs Official Direct Price! (${tierData.group})`;
+        calcSavingsDisplay.textContent = `Save ${savingsPercent}% vs Official Direct Price! (Limited-Time Quota: ${tierData.group})`;
         calcSavingsDisplay.style.color = '#34d399';
       } else {
-        calcSavingsDisplay.textContent = `Unthrottled Enterprise Dedicated Seats (${tierData.group})`;
+        calcSavingsDisplay.textContent = `Unthrottled Dedicated Enterprise Seats (${tierData.group})`;
         calcSavingsDisplay.style.color = '#f472b6';
       }
     }
