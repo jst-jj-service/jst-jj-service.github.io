@@ -49,7 +49,7 @@
         <div class="hero-badge">
           <span class="badge badge-primary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            6 High-Speed Provider Pools · Rates from 0.07x to 1.6x
+            6 High-Speed Provider Pools · Rates from 0.13x to 1.6x
           </span>
         </div>
 
@@ -105,8 +105,8 @@
           <p>Average First Token Latency</p>
         </div>
         <div class="stat-item">
-          <h3 class="gradient-text">0.07x</h3>
-          <p>Lowest Rate (GPT 福利)</p>
+          <h3 class="gradient-text">0.13x</h3>
+          <p>Lowest Rate Multiplier</p>
         </div>
         <div class="stat-item">
           <h3 class="gradient-text-accent">99.9%</h3>
@@ -222,7 +222,7 @@
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
           <div class="pricing-tabs">
             <button class="tab-btn pricing-tab-btn active" data-tier="all">All Groups</button>
-            <button class="tab-btn pricing-tab-btn" data-tier="welfare">GPT 福利 (0.07x)</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="welfare">GPT 福利 (0.21x)</button>
             <button class="tab-btn pricing-tab-btn" data-tier="opus">Opus 5 (0.13x)</button>
             <button class="tab-btn pricing-tab-btn" data-tier="plus">GPT Plus (0.16x)</button>
             <button class="tab-btn pricing-tab-btn" data-tier="pro">GPT Pro (0.20x)</button>
@@ -250,22 +250,22 @@
               </tr>
             </thead>
             <tbody>
-              <!-- 1. GPT 福利 (0.07x) -->
+              <!-- 1. GPT 福利 (0.21x) -->
               <tr class="pricing-row" data-tier="welfare">
                 <td class="model-name-cell"><strong>gpt-4o-mini</strong></td>
-                <td class="group-name-cell"><span class="badge badge-success">GPT 福利｜0.07x</span></td>
-                <td><span class="tier-multiplier">0.07x</span></td>
-                <td>$0.0105</td>
-                <td>$0.0420</td>
+                <td class="group-name-cell"><span class="badge badge-success">GPT 福利｜0.21x</span></td>
+                <td><span class="tier-multiplier">0.21x</span></td>
+                <td>$0.0315</td>
+                <td>$0.1260</td>
                 <td>128K</td>
                 <td>Fast summarization, high-frequency extraction, chatbots</td>
               </tr>
               <tr class="pricing-row" data-tier="welfare">
                 <td class="model-name-cell"><strong>gpt-3.5-turbo</strong></td>
-                <td class="group-name-cell"><span class="badge badge-success">GPT 福利｜0.07x</span></td>
-                <td><span class="tier-multiplier">0.07x</span></td>
-                <td>$0.0350</td>
+                <td class="group-name-cell"><span class="badge badge-success">GPT 福利｜0.21x</span></td>
+                <td><span class="tier-multiplier">0.21x</span></td>
                 <td>$0.1050</td>
+                <td>$0.3150</td>
                 <td>16K</td>
                 <td>Legacy fast completions, lightweight tasks</td>
               </tr>
@@ -431,7 +431,7 @@
               <div class="calc-input-group">
                 <label for="calcTier">Select Model & Tier Group</label>
                 <select id="calcTier" class="calc-select">
-                  <option value="gpt-4o-mini">GPT-4o Mini — GPT 福利 (0.07x)</option>
+                  <option value="gpt-4o-mini">GPT-4o Mini — GPT 福利 (0.21x)</option>
                   <option value="claude-3-5-sonnet" selected>Claude 3.5 Sonnet v2 — Opus 5 (0.13x)</option>
                   <option value="claude-3-5-haiku">Claude 3.5 Haiku — Opus 5 (0.13x)</option>
                   <option value="claude-opus-5">Claude Opus 5 — Opus 5 (0.13x)</option>
@@ -646,7 +646,7 @@ response = client.chat.completions.create(
               <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-              We operate 6 upstream pools with distinct rate multipliers: <strong>GPT 福利 (0.07x)</strong>, <strong>Opus 5 (0.13x)</strong>, <strong>GPT Plus (0.16x)</strong>, <strong>GPT Pro (0.20x)</strong>, <strong>GPT Pro尊享 (0.30x)</strong>, and <strong>Claude Max (1.6x)</strong>. When you send a request, our gateway automatically selects the cheapest pool that supports your requested model.
+              We operate 6 upstream pools with distinct rate multipliers: <strong>GPT 福利 (0.21x)</strong>, <strong>Opus 5 (0.13x)</strong>, <strong>GPT Plus (0.16x)</strong>, <strong>GPT Pro (0.20x)</strong>, <strong>GPT Pro尊享 (0.30x)</strong>, and <strong>Claude Max (1.6x)</strong>. When you send a request, our gateway automatically selects the cheapest pool that supports your requested model.
             </div>
           </div>
 
@@ -751,7 +751,7 @@ response = client.chat.completions.create(
       <div class="footer-bottom">
         <div>© 2026 AI Gateway. All rights reserved.</div>
         <div style="color: var(--text-dim); font-size: 0.85rem;">
-          6 Provider Pools (0.07x - 1.6x) · Compatible with OpenAI & Anthropic API specs.
+          6 Provider Pools (0.13x - 1.6x) · Compatible with OpenAI & Anthropic API specs.
         </div>
       </div>
     </div>
