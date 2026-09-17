@@ -100,8 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const TIER_RATES = {
     'gpt-4o-mini': {
       official: 0.30,
-      multiplier: 0.07,
-      group: 'GPT 福利｜0.07x',
+      multiplier: 0.21,
+      group: 'GPT 福利｜0.21x',
       modelName: 'GPT-4o Mini'
     },
     'claude-3-5-sonnet': {
