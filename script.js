@@ -117,22 +117,22 @@ document.addEventListener('DOMContentLoaded', () => {
     '0.21': {
       multiplier: 0.21,
       name: 'Starter Pool (0.21x)',
-      description: 'gpt-4o-mini, gpt-3.5-turbo, gpt-4o'
+      description: 'gpt-4o-mini'
     },
     '0.32': {
       multiplier: 0.32,
       name: 'Plus Pool (0.32x)',
-      description: 'gpt-4o, chatgpt-4o-latest, gpt-4-turbo, embeddings'
+      description: 'gpt-4o, chatgpt-4o-latest'
     },
     '0.5': {
       multiplier: 0.50,
       name: 'Pro Reasoning Pool (0.50x)',
-      description: 'o1-mini, o1-preview, o1, gpt-4o, chatgpt-4o-latest'
+      description: 'o1-mini, o1-preview'
     },
     '0.75': {
       multiplier: 0.75,
       name: 'Flagship Pro Pool (0.75x)',
-      description: 'o1 Flagship, o3-mini, gpt-4o-realtime-preview'
+      description: 'o1, o3-mini'
     }
   };
 
