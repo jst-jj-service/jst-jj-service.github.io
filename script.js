@@ -1,11 +1,26 @@
 /**
- * AI Gateway — Interactive Promotional Landing Page Script
- * Featuring Exact Promotional Pools (0.21x, 0.32x, 0.50x, 0.75x, Claude Pools)
- * Real Frontier Models: OpenAI o1, o3-mini, GPT-4o, Claude 3.5 Sonnet v2, Opus 5
+ * AI Gateway — Interactive Platform Landing Page Script
+ * 100% English | Zero Chinese Characters
+ * 4 OpenAI Routing Pools: 0.21x, 0.32x, 0.50x, 0.75x
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Copy to Clipboard Functionality
+  // 1. Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const navLinks = document.getElementById('navLinks');
+  if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile-open');
+    });
+    // Close mobile menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile-open');
+      });
+    });
+  }
+
+  // 2. Copy to Clipboard Functionality
   document.querySelectorAll('.copy-btn, .code-copy-btn').forEach(button => {
     button.addEventListener('click', async () => {
       const textToCopy = button.getAttribute('data-copy') || 
@@ -32,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Setup Guides Tab Switching
+  // 3. Setup Guides Tab Switching
   const guideTabs = document.querySelectorAll('.guide-nav-item');
   const guidePanes = document.querySelectorAll('.guide-pane');
 
@@ -51,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Pricing Filter Tabs
+  // 4. Pricing Filter Tabs
   const pricingTabs = document.querySelectorAll('.pricing-tab-btn');
   const pricingRows = document.querySelectorAll('.pricing-row');
 
@@ -72,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Model Search Input
+  // 5. Model Search Input
   const modelSearch = document.getElementById('modelSearchInput');
   if (modelSearch) {
     modelSearch.addEventListener('input', (e) => {
@@ -90,100 +105,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Interactive Token Cost Calculator with Updated Promotional Pools
+  // 6. Interactive Quota Calculator — No Original Price, 4 Pools Only
   const calcTokensInput = document.getElementById('calcTokens');
   const calcTierSelect = document.getElementById('calcTier');
-  const calcPriceDisplay = document.getElementById('calcPrice');
-  const calcOfficialDisplay = document.getElementById('calcOfficialPrice');
-  const calcSavingsDisplay = document.getElementById('calcSavings');
+  const calcDeductedDisplay = document.getElementById('calcDeductedTokens');
+  const calcMultiplierDisplay = document.getElementById('calcMultiplierDisplay');
+  const calcSummaryDisplay = document.getElementById('calcSummaryText');
 
-  // Exact Promotional Pools & Multipliers requested by user
-  const TIER_RATES = {
-    'gpt-4o-mini': {
-      official: 0.30,
+  // Exact 4 Pools: 0.21, 0.32, 0.5, 0.75 (All OpenAI)
+  const POOL_RATES = {
+    '0.21': {
       multiplier: 0.21,
-      group: 'GPT 尝鲜特惠｜0.21x',
-      modelName: 'GPT-4o Mini (0.21x Promo)'
+      name: 'Starter Pool (0.21x)',
+      description: 'gpt-4o-mini, gpt-3.5-turbo, gpt-4o'
     },
-    'gpt-4o': {
-      official: 5.00,
+    '0.32': {
       multiplier: 0.32,
-      group: 'GPT Plus 进阶｜0.32x',
-      modelName: 'GPT-4o (0.32x Plus)'
+      name: 'Plus Pool (0.32x)',
+      description: 'gpt-4o, chatgpt-4o-latest, gpt-4-turbo, embeddings'
     },
-    'chatgpt-4o-latest': {
-      official: 7.50,
-      multiplier: 0.32,
-      group: 'GPT Plus 进阶｜0.32x',
-      modelName: 'ChatGPT-4o Latest'
-    },
-    'o1-mini': {
-      official: 6.00,
+    '0.5': {
       multiplier: 0.50,
-      group: 'GPT Pro 专业｜0.50x',
-      modelName: 'OpenAI o1-mini (0.50x Pro)'
+      name: 'Pro Reasoning Pool (0.50x)',
+      description: 'o1-mini, o1-preview, o1, gpt-4o, chatgpt-4o-latest'
     },
-    'o1-preview': {
-      official: 30.00,
-      multiplier: 0.50,
-      group: 'GPT Pro 专业｜0.50x',
-      modelName: 'OpenAI o1-preview'
-    },
-    'o1-flagship': {
-      official: 30.00,
+    '0.75': {
       multiplier: 0.75,
-      group: 'GPT Pro 尊享旗舰｜0.75x',
-      modelName: 'OpenAI o1 Flagship (0.75x)'
-    },
-    'o3-mini': {
-      official: 4.00,
-      multiplier: 0.75,
-      group: 'GPT Pro 尊享旗舰｜0.75x',
-      modelName: 'OpenAI o3-mini (0.75x)'
-    },
-    'claude-3-5-sonnet': {
-      official: 9.00,
-      multiplier: 0.35,
-      group: 'Claude & Opus 5',
-      modelName: 'Claude 3.5 Sonnet v2'
-    },
-    'claude-opus-5': {
-      official: 15.00,
-      multiplier: 0.35,
-      group: 'Claude & Opus 5',
-      modelName: 'Claude Opus 5'
-    },
-    'claude-max': {
-      official: 15.00,
-      multiplier: 1.60,
-      group: 'Claude Max 尊享专线｜1.6x',
-      modelName: 'Claude 3.5 Sonnet Max (Dedicated)'
+      name: 'Flagship Pro Pool (0.75x)',
+      description: 'o1 Flagship, o3-mini, gpt-4o-realtime-preview'
     }
   };
 
   function updateCalculator() {
-    if (!calcTokensInput || !calcTierSelect || !calcPriceDisplay) return;
+    if (!calcTokensInput || !calcTierSelect) return;
 
     const millionTokens = Math.max(0.1, parseFloat(calcTokensInput.value) || 1);
     const selectedKey = calcTierSelect.value;
-    const tierData = TIER_RATES[selectedKey] || TIER_RATES['gpt-4o'];
+    const pool = POOL_RATES[selectedKey] || POOL_RATES['0.32'];
 
-    const officialCost = millionTokens * tierData.official;
-    const gatewayCost = officialCost * tierData.multiplier;
-    const savingsPercent = Math.round((1 - tierData.multiplier) * 100);
+    const rawTokens = millionTokens * 1000000;
+    const effectiveTokensDeducted = Math.round(rawTokens * pool.multiplier);
 
-    calcPriceDisplay.textContent = `$${gatewayCost.toFixed(2)}`;
-    if (calcOfficialDisplay) {
-      calcOfficialDisplay.textContent = `$${officialCost.toFixed(2)}`;
+    if (calcDeductedDisplay) {
+      calcDeductedDisplay.textContent = `${(effectiveTokensDeducted / 1000000).toFixed(2)}M Tokens`;
     }
-    if (calcSavingsDisplay) {
-      if (tierData.multiplier < 1) {
-        calcSavingsDisplay.textContent = `Save ${savingsPercent}% vs Official Direct Price! (Limited-Time Quota: ${tierData.group})`;
-        calcSavingsDisplay.style.color = '#34d399';
-      } else {
-        calcSavingsDisplay.textContent = `Unthrottled Dedicated Enterprise Seats (${tierData.group})`;
-        calcSavingsDisplay.style.color = '#f472b6';
-      }
+
+    if (calcMultiplierDisplay) {
+      calcMultiplierDisplay.textContent = `${pool.multiplier}x Multiplier`;
+    }
+
+    if (calcSummaryDisplay) {
+      calcSummaryDisplay.textContent = `Consuming ${millionTokens}M raw tokens in the ${pool.name} deducts ${(effectiveTokensDeducted / 1000000).toFixed(2)}M from your account balance.`;
     }
   }
 
@@ -193,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCalculator();
   }
 
-  // 6. FAQ Accordions
+  // 7. FAQ Accordions
   document.querySelectorAll('.faq-question').forEach(header => {
     header.addEventListener('click', () => {
       const item = header.parentElement;
