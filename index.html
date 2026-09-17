@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Gateway — One High-Speed API for All Frontier AI Models</title>
-  <meta name="description" content="Enterprise OpenAI-compatible AI API relay gateway. Smart multi-tier routing for Claude 3.5 Sonnet (v2), OpenAI o1, GPT-4o, and Claude Opus 5 with up to 93% off official rates.">
+  <title>AI Gateway — High-Speed Relay for GPT-6 Astra & Claude Fable 5.1</title>
+  <meta name="description" content="Next-generation OpenAI-compatible API relay. Access GPT-6 Astra, Claude Fable 5.1, OpenAI o1, and Claude 3.5 Sonnet v2 with limited-time promotional pools from 0.21x.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 </head>
 <body>
+  <!-- Limited-Time Quota Top Notification Banner -->
+  <div style="background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%); color: #ffffff; padding: 10px 20px; text-align: center; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.02em;">
+    🔥 <span>LIMITED-TIME PROMO QUOTA: Special promotional rates active across all pools (0.21x / 0.32x / 0.50x / 0.75x)! Rate locks apply while current batch quota lasts.</span>
+  </div>
+
   <!-- Ambient background lighting effects -->
   <div class="ambient-glow glow-1"></div>
   <div class="ambient-glow glow-2"></div>
@@ -28,16 +33,16 @@
 
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
-        <li><a href="#packages">Quota Packs</a></li>
-        <li><a href="#pricing">Models & Rates</a></li>
+        <li><a href="#packages">Limited Quota</a></li>
+        <li><a href="#pricing">Promotional Pools</a></li>
         <li><a href="#calculator">Calculator</a></li>
         <li><a href="#quickstart">Integration</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="#packages" class="btn btn-outline btn-sm">Buy Quota (CDK)</a>
-        <a href="#pricing" class="btn btn-primary btn-sm">View Models</a>
+        <a href="#packages" class="btn btn-outline btn-sm">Get Promo CDK</a>
+        <a href="#pricing" class="btn btn-primary btn-sm">View Pools</a>
       </div>
     </div>
   </header>
@@ -49,26 +54,26 @@
         <div class="hero-badge">
           <span class="badge badge-primary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            6 High-Speed Provider Pools · Rates from 0.13x to 1.6x
+            Frontier Models: GPT-6 Astra & Claude Fable 5.1 · Limited-Time Quota Active
           </span>
         </div>
 
         <h1 class="hero-title">
-          One Unified API for <br>
-          <span class="gradient-text">New OpenAI & Claude Models</span>
+          Next-Gen AI Relay for <br>
+          <span class="gradient-text">GPT-6 Astra & Claude Fable 5.1</span>
         </h1>
 
         <p class="hero-subtitle">
-          Access Claude 3.5 Sonnet (v2), OpenAI o1, GPT-4o, and Claude Opus 5 through a single drop-in OpenAI-compatible endpoint. Automatic cheapest-tier routing and instant CDK token activation.
+          Connect to OpenAI's agentic <strong>GPT-6 Astra</strong> and Anthropic's deep-reasoning <strong>Claude Fable 5.1</strong> through a single drop-in OpenAI-compatible endpoint. Enjoy limited-time promotional pool discounts with permanent token validity.
         </p>
 
         <div class="hero-actions">
           <a href="#packages" class="btn btn-primary btn-lg">
-            <span>Get Quota & API Key</span>
+            <span>Claim Limited-Time Quota</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="#pricing" class="btn btn-outline btn-lg">
-            <span>Explore 6 Pricing Groups</span>
+            <span>Explore Promotional Pools</span>
           </a>
         </div>
 
@@ -86,13 +91,13 @@
 
         <!-- Models Pill Strip -->
         <div class="models-ticker">
+          <div class="model-pill"><span class="model-pill-dot" style="background:#a78bfa;"></span> <strong>GPT-6 Astra</strong> (New)</div>
+          <div class="model-pill"><span class="model-pill-dot" style="background:#f472b6;"></span> <strong>Claude Fable 5.1</strong> (New)</div>
           <div class="model-pill"><span class="model-pill-dot"></span> Claude 3.5 Sonnet v2</div>
           <div class="model-pill"><span class="model-pill-dot"></span> OpenAI o1 Flagship</div>
           <div class="model-pill"><span class="model-pill-dot"></span> OpenAI o3-mini</div>
           <div class="model-pill"><span class="model-pill-dot"></span> GPT-4o Multimodal</div>
           <div class="model-pill"><span class="model-pill-dot"></span> Claude Opus 5</div>
-          <div class="model-pill"><span class="model-pill-dot"></span> Claude 3.5 Haiku</div>
-          <div class="model-pill"><span class="model-pill-dot"></span> GPT-4o-mini</div>
         </div>
       </div>
     </section>
@@ -105,16 +110,16 @@
           <p>Average First Token Latency</p>
         </div>
         <div class="stat-item">
-          <h3 class="gradient-text">0.13x</h3>
-          <p>Lowest Rate Multiplier</p>
+          <h3 class="gradient-text">0.21x</h3>
+          <p>Promo Starter Pool Rate</p>
         </div>
         <div class="stat-item">
           <h3 class="gradient-text-accent">99.9%</h3>
           <p>High-Availability Uptime</p>
         </div>
         <div class="stat-item">
-          <h3 class="gradient-text">6 Tiers</h3>
-          <p>Multi-Key Intelligent Routing</p>
+          <h3 class="gradient-text">⏳ Limited Quota</h3>
+          <p>Special Promotional Allocation</p>
         </div>
       </div>
     </section>
@@ -123,48 +128,48 @@
     <section class="section" id="packages">
       <div class="container">
         <div class="section-header">
-          <span class="badge badge-primary section-badge">Prepaid Token Quota</span>
-          <h2 class="section-title">Flexible Quota Packages (CDK Activation)</h2>
-          <p class="section-subtitle">Purchase token activation keys (CDK), redeem instantly in your dashboard, and start coding. No subscriptions, no expiration date.</p>
+          <span class="badge badge-primary section-badge">⏳ Limited-Time Quota Promotion</span>
+          <h2 class="section-title">Prepaid Quota Packages (CDK Activation)</h2>
+          <p class="section-subtitle">Lock in your token balance at promotional pool rates. Tokens never expire once redeemed.</p>
         </div>
 
         <div class="packages-grid">
           <!-- 1M Quota Card -->
           <div class="package-card">
             <div>
-              <span class="badge" style="border-color: rgba(255,255,255,0.1); color: var(--text-muted);">Starter Pack</span>
+              <span class="badge" style="border-color: rgba(255,255,255,0.1); color: var(--text-muted);">Starter Promo</span>
               <div class="package-tokens">1,000,000</div>
-              <p style="color: var(--text-muted); font-size: 0.9rem;">1 Million Token Quota</p>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">1M Limited-Time Token Quota</p>
               
               <ul class="package-features">
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Access to all 6 Upstream Groups</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Access to all promotional pools</li>
                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ~1,000 Cursor code prompts</li>
                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tokens never expire</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Instant CDK code delivery</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Instant CDK card code delivery</li>
               </ul>
             </div>
             <a href="https://pay.ldxp.cn/shop/RTLYMHZP/m46bgp" target="_blank" rel="noopener" class="btn btn-outline" style="width: 100%;">
-              Buy 1M CDK
+              Buy 1M Promo CDK
             </a>
           </div>
 
           <!-- 5M Quota Card (Popular) -->
           <div class="package-card popular">
-            <span class="badge badge-primary package-badge-top">⭐ Most Popular</span>
+            <span class="badge badge-primary package-badge-top">⭐ Limited Quota Special</span>
             <div>
               <span class="badge badge-primary">Developer Pack</span>
               <div class="package-tokens gradient-text">5,000,000</div>
-              <p style="color: var(--text-muted); font-size: 0.9rem;">5 Million Token Quota</p>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">5M Limited-Time Token Quota</p>
               
               <ul class="package-features">
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Optimal for Claude 3.5 Sonnet v2</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ~5,000 Cursor & IDE generations</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Full 0.13x Opus 5 rate support</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ideal for Claude Fable 5.1 & Sonnet v2</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ~5,000 Cursor / IDE generations</li>
                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Automatic prompt cache discount</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Full access to 0.32x Plus & 0.50x Pro</li>
               </ul>
             </div>
             <a href="https://pay.ldxp.cn/shop/RTLYMHZP/m46bgp" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%;">
-              Buy 5M CDK
+              Buy 5M Promo CDK
             </a>
           </div>
 
@@ -173,17 +178,17 @@
             <div>
               <span class="badge" style="border-color: rgba(6,182,212,0.3); color: #38bdf8; background: rgba(6,182,212,0.1);">Pro Agent Pack</span>
               <div class="package-tokens">20,000,000</div>
-              <p style="color: var(--text-muted); font-size: 0.9rem;">20 Million Token Quota</p>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">20M Limited-Time Token Quota</p>
               
               <ul class="package-features">
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Heavy autonomous coding agents</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> OpenAI o1 & o3-mini reasoning</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Full access to <strong>GPT-6 Astra</strong></li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> OpenAI o1 Flagship & o3-mini</li>
                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> High concurrency burst allowance</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Priority routing channel access</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 0.75x Pro 尊享旗舰 pool access</li>
               </ul>
             </div>
             <a href="https://pay.ldxp.cn/shop/RTLYMHZP/m46bgp" target="_blank" rel="noopener" class="btn btn-outline" style="width: 100%;">
-              Buy 20M CDK
+              Buy 20M Promo CDK
             </a>
           </div>
 
@@ -192,46 +197,46 @@
             <div>
               <span class="badge" style="border-color: rgba(236,72,153,0.3); color: #f472b6; background: rgba(236,72,153,0.1);">Enterprise Pack</span>
               <div class="package-tokens">100,000,000</div>
-              <p style="color: var(--text-muted); font-size: 0.9rem;">100 Million Token Quota</p>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">100M Limited-Time Token Quota</p>
               
               <ul class="package-features">
                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dedicated Claude Max 1.6x seats</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Production SaaS & corporate teams</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Highest rate limit tier (300+ RPM)</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dedicated account assistance</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Highest burst ceiling (300+ RPM)</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unthrottled autonomous agent runs</li>
+                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Priority VIP engineering support</li>
               </ul>
             </div>
             <a href="https://pay.ldxp.cn/shop/RTLYMHZP/m46bgp" target="_blank" rel="noopener" class="btn btn-outline" style="width: 100%;">
-              Buy 100M CDK
+              Buy 100M Promo CDK
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Pricing Section: The 6 Groups -->
+    <!-- Pricing Section: The Promotional Pools -->
     <section class="section" id="pricing" style="background: rgba(0, 0, 0, 0.2);">
       <div class="container">
         <div class="section-header">
-          <span class="badge badge-primary section-badge">6 Official Provider Pools</span>
-          <h2 class="section-title">New OpenAI & Claude Model Rates</h2>
-          <p class="section-subtitle">Our gateway dynamically matches your request to the cheapest upstream key that supports your requested model.</p>
+          <span class="badge badge-primary section-badge">⚡ Promotional Pools Directory</span>
+          <h2 class="section-title">Transparent Pool Rates & Model Directory</h2>
+          <p class="section-subtitle">Our gateway dynamically matches your request to the lowest-cost available pool for your requested model.</p>
         </div>
 
         <!-- Filter Controls -->
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
           <div class="pricing-tabs">
-            <button class="tab-btn pricing-tab-btn active" data-tier="all">All Groups</button>
-            <button class="tab-btn pricing-tab-btn" data-tier="welfare">GPT 福利 (0.21x)</button>
-            <button class="tab-btn pricing-tab-btn" data-tier="opus">Opus 5 (0.13x)</button>
-            <button class="tab-btn pricing-tab-btn" data-tier="plus">GPT Plus (0.16x)</button>
-            <button class="tab-btn pricing-tab-btn" data-tier="pro">GPT Pro (0.20x)</button>
-            <button class="tab-btn pricing-tab-btn" data-tier="pro-vip">GPT Pro尊享 (0.30x)</button>
+            <button class="tab-btn pricing-tab-btn active" data-tier="all">All Pools</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="promo">尝鲜特惠 (0.21x)</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="plus">Plus 进阶 (0.32x)</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="pro">Pro 专业 (0.50x)</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="pro-vip">尊享旗舰 (0.75x)</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="claude">Claude Fable & Opus</button>
             <button class="tab-btn pricing-tab-btn" data-tier="claude-max">Claude Max (1.6x)</button>
           </div>
 
           <div style="min-width: 260px;">
-            <input type="text" id="modelSearchInput" class="calc-input" placeholder="🔍 Search model (e.g. o1, claude, gpt-4o...)" style="padding: 8px 14px; font-size: 0.9rem;">
+            <input type="text" id="modelSearchInput" class="calc-input" placeholder="🔍 Search model (e.g. astra, fable, o1...)" style="padding: 8px 14px; font-size: 0.9rem;">
           </div>
         </div>
 
@@ -241,7 +246,7 @@
             <thead>
               <tr>
                 <th>Model Name</th>
-                <th>Group / Tier</th>
+                <th>Pool / Tier</th>
                 <th>Multiplier</th>
                 <th>Prompt / 1M</th>
                 <th>Completion / 1M</th>
@@ -250,19 +255,19 @@
               </tr>
             </thead>
             <tbody>
-              <!-- 1. GPT 福利 (0.21x) -->
-              <tr class="pricing-row" data-tier="welfare">
+              <!-- 1. GPT 尝鲜特惠 (0.21x) -->
+              <tr class="pricing-row" data-tier="promo">
                 <td class="model-name-cell"><strong>gpt-4o-mini</strong></td>
-                <td class="group-name-cell"><span class="badge badge-success">GPT 福利｜0.21x</span></td>
+                <td class="group-name-cell"><span class="badge badge-success">GPT 尝鲜特惠｜0.21x</span></td>
                 <td><span class="tier-multiplier">0.21x</span></td>
                 <td>$0.0315</td>
                 <td>$0.1260</td>
                 <td>128K</td>
                 <td>Fast summarization, high-frequency extraction, chatbots</td>
               </tr>
-              <tr class="pricing-row" data-tier="welfare">
+              <tr class="pricing-row" data-tier="promo">
                 <td class="model-name-cell"><strong>gpt-3.5-turbo</strong></td>
-                <td class="group-name-cell"><span class="badge badge-success">GPT 福利｜0.21x</span></td>
+                <td class="group-name-cell"><span class="badge badge-success">GPT 尝鲜特惠｜0.21x</span></td>
                 <td><span class="tier-multiplier">0.21x</span></td>
                 <td>$0.1050</td>
                 <td>$0.3150</td>
@@ -270,140 +275,149 @@
                 <td>Legacy fast completions, lightweight tasks</td>
               </tr>
 
-              <!-- 2. Opus 5 (0.13x) -->
-              <tr class="pricing-row" data-tier="opus">
-                <td class="model-name-cell"><strong>claude-3-5-sonnet-20241022</strong></td>
-                <td class="group-name-cell"><span class="badge badge-primary">Opus 5｜0.13x</span></td>
-                <td><span class="tier-multiplier">0.13x</span></td>
-                <td>$0.3900</td>
-                <td>$1.9500</td>
-                <td>200K</td>
-                <td>New Claude 3.5 Sonnet v2: SOTA coding, Cursor IDE, agentic loops</td>
-              </tr>
-              <tr class="pricing-row" data-tier="opus">
-                <td class="model-name-cell"><strong>claude-3-5-haiku-20241022</strong></td>
-                <td class="group-name-cell"><span class="badge badge-primary">Opus 5｜0.13x</span></td>
-                <td><span class="tier-multiplier">0.13x</span></td>
-                <td>$0.1040</td>
-                <td>$0.5200</td>
-                <td>200K</td>
-                <td>New Haiku v2: sub-second generation, quick code edits</td>
-              </tr>
-              <tr class="pricing-row" data-tier="opus">
-                <td class="model-name-cell"><strong>claude-opus-5</strong></td>
-                <td class="group-name-cell"><span class="badge badge-primary">Opus 5｜0.13x</span></td>
-                <td><span class="tier-multiplier">0.13x</span></td>
-                <td>$1.9500</td>
-                <td>$9.7500</td>
-                <td>200K</td>
-                <td>Claude Opus 5: maximum intelligence & deep analysis</td>
-              </tr>
-              <tr class="pricing-row" data-tier="opus">
-                <td class="model-name-cell"><strong>claude-3-opus-20240229</strong></td>
-                <td class="group-name-cell"><span class="badge badge-primary">Opus 5｜0.13x</span></td>
-                <td><span class="tier-multiplier">0.13x</span></td>
-                <td>$1.9500</td>
-                <td>$9.7500</td>
-                <td>200K</td>
-                <td>Claude 3 Opus flagship reasoning & research</td>
-              </tr>
-
-              <!-- 3. GPT Plus (0.16x) -->
+              <!-- 2. GPT Plus 进阶版 (0.32x) -->
               <tr class="pricing-row" data-tier="plus">
                 <td class="model-name-cell"><strong>gpt-4o</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #67e8f9; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">GPT Plus｜0.16x</span></td>
-                <td><span class="tier-multiplier">0.16x</span></td>
-                <td>$0.4000</td>
-                <td>$1.6000</td>
+                <td class="group-name-cell"><span class="badge" style="color: #67e8f9; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">GPT Plus 进阶｜0.32x</span></td>
+                <td><span class="tier-multiplier">0.32x</span></td>
+                <td>$0.8000</td>
+                <td>$3.2000</td>
                 <td>128K</td>
                 <td>OpenAI multimodal flagship (vision, audio, structured JSON)</td>
               </tr>
               <tr class="pricing-row" data-tier="plus">
                 <td class="model-name-cell"><strong>chatgpt-4o-latest</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #67e8f9; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">GPT Plus｜0.16x</span></td>
-                <td><span class="tier-multiplier">0.16x</span></td>
-                <td>$0.8000</td>
-                <td>$2.4000</td>
-                <td>128K</td>
-                <td>Latest dynamic ChatGPT 4o model with web search knowledge</td>
-              </tr>
-              <tr class="pricing-row" data-tier="plus">
-                <td class="model-name-cell"><strong>gpt-4-turbo</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #67e8f9; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">GPT Plus｜0.16x</span></td>
-                <td><span class="tier-multiplier">0.16x</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #67e8f9; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">GPT Plus 进阶｜0.32x</span></td>
+                <td><span class="tier-multiplier">0.32x</span></td>
                 <td>$1.6000</td>
                 <td>$4.8000</td>
                 <td>128K</td>
-                <td>Vision analysis and complex function calling</td>
+                <td>Continuously updated ChatGPT research model with web search</td>
+              </tr>
+              <tr class="pricing-row" data-tier="plus">
+                <td class="model-name-cell"><strong>gpt-4-turbo</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #67e8f9; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">GPT Plus 进阶｜0.32x</span></td>
+                <td><span class="tier-multiplier">0.32x</span></td>
+                <td>$3.2000</td>
+                <td>$9.6000</td>
+                <td>128K</td>
+                <td>High-capability OpenAI vision and structured JSON outputs</td>
               </tr>
               <tr class="pricing-row" data-tier="plus">
                 <td class="model-name-cell"><strong>text-embedding-3-small/large</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #67e8f9; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">GPT Plus｜0.16x</span></td>
-                <td><span class="tier-multiplier">0.16x</span></td>
-                <td>$0.0032</td>
+                <td class="group-name-cell"><span class="badge" style="color: #67e8f9; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">GPT Plus 进阶｜0.32x</span></td>
+                <td><span class="tier-multiplier">0.32x</span></td>
+                <td>$0.0064</td>
                 <td>—</td>
                 <td>8K</td>
-                <td>Vector embeddings for RAG and semantic search</td>
+                <td>Vector embeddings for RAG and semantic knowledge retrieval</td>
               </tr>
 
-              <!-- 4. GPT Pro (0.20x) -->
+              <!-- 3. GPT Pro 专业版 (0.50x) -->
               <tr class="pricing-row" data-tier="pro">
                 <td class="model-name-cell"><strong>o1-mini</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">GPT Pro｜0.20x</span></td>
-                <td><span class="tier-multiplier">0.20x</span></td>
-                <td>$0.6000</td>
-                <td>$2.4000</td>
+                <td class="group-name-cell"><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">GPT Pro 专业｜0.50x</span></td>
+                <td><span class="tier-multiplier">0.50x</span></td>
+                <td>$1.5000</td>
+                <td>$6.0000</td>
                 <td>128K</td>
                 <td>Fast STEM reasoning, math, and competitive code generation</td>
               </tr>
               <tr class="pricing-row" data-tier="pro">
                 <td class="model-name-cell"><strong>o1-preview</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">GPT Pro｜0.20x</span></td>
-                <td><span class="tier-multiplier">0.20x</span></td>
-                <td>$3.0000</td>
-                <td>$12.0000</td>
+                <td class="group-name-cell"><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">GPT Pro 专业｜0.50x</span></td>
+                <td><span class="tier-multiplier">0.50x</span></td>
+                <td>$7.5000</td>
+                <td>$30.0000</td>
                 <td>128K</td>
-                <td>Deep reasoning preview for difficult programming challenges</td>
+                <td>Deep reasoning preview for difficult coding architecture</td>
               </tr>
 
-              <!-- 5. GPT Pro尊享 (0.30x) -->
+              <!-- 4. GPT Pro 尊享旗舰 (0.75x) -->
+              <tr class="pricing-row" data-tier="pro-vip">
+                <td class="model-name-cell"><strong>gpt-6-astra (OpenAI Astra)</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.5); background: rgba(139,92,246,0.15);">尊享旗舰｜0.75x</span></td>
+                <td><span class="tier-multiplier" style="color: #a78bfa;">0.75x</span></td>
+                <td>$7.5000</td>
+                <td>$30.0000</td>
+                <td>256K</td>
+                <td><strong>GPT-6 Astra</strong>: OpenAI frontier agentic model for software engineering & computer use</td>
+              </tr>
               <tr class="pricing-row" data-tier="pro-vip">
                 <td class="model-name-cell"><strong>o1 (Official Flagship)</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">GPT Pro尊享｜0.30x</span></td>
-                <td><span class="tier-multiplier" style="color: #a78bfa;">0.30x</span></td>
-                <td>$4.5000</td>
-                <td>$18.0000</td>
+                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">尊享旗舰｜0.75x</span></td>
+                <td><span class="tier-multiplier" style="color: #a78bfa;">0.75x</span></td>
+                <td>$11.2500</td>
+                <td>$45.0000</td>
                 <td>200K</td>
-                <td>Full OpenAI o1 Flagship reasoning model with full limits</td>
+                <td>Full OpenAI o1 Flagship reasoning with code execution</td>
               </tr>
               <tr class="pricing-row" data-tier="pro-vip">
                 <td class="model-name-cell"><strong>o3-mini</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">GPT Pro尊享｜0.30x</span></td>
-                <td><span class="tier-multiplier" style="color: #a78bfa;">0.30x</span></td>
-                <td>$0.3300</td>
-                <td>$1.3200</td>
+                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">尊享旗舰｜0.75x</span></td>
+                <td><span class="tier-multiplier" style="color: #a78bfa;">0.75x</span></td>
+                <td>$0.8250</td>
+                <td>$3.3000</td>
                 <td>200K</td>
-                <td>Newest OpenAI o3-mini fast reasoning model</td>
+                <td>Next-gen OpenAI o3-mini fast thinking & reasoning</td>
               </tr>
               <tr class="pricing-row" data-tier="pro-vip">
                 <td class="model-name-cell"><strong>gpt-4o-realtime-preview</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">GPT Pro尊享｜0.30x</span></td>
-                <td><span class="tier-multiplier" style="color: #a78bfa;">0.30x</span></td>
-                <td>$1.5000</td>
-                <td>$6.0000</td>
+                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">尊享旗舰｜0.75x</span></td>
+                <td><span class="tier-multiplier" style="color: #a78bfa;">0.75x</span></td>
+                <td>$3.7500</td>
+                <td>$15.0000</td>
                 <td>128K</td>
                 <td>Ultra-low latency bidirectional audio and text streaming</td>
               </tr>
 
-              <!-- 6. Claude Max (1.6x) -->
-              <tr class="pricing-row" data-tier="claude-max">
-                <td class="model-name-cell"><strong>claude-3-5-sonnet (Max Dedicated)</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(236,72,153,0.3); background: rgba(236,72,153,0.1);">Claude Max｜1.6x</span></td>
-                <td><span class="tier-multiplier" style="color: #f472b6;">1.60x</span></td>
-                <td>$4.8000</td>
-                <td>$24.0000</td>
+              <!-- 5. Claude Fable & Opus -->
+              <tr class="pricing-row" data-tier="claude">
+                <td class="model-name-cell"><strong>claude-fable-5.1 (Claude Fable)</strong></td>
+                <td class="group-name-cell"><span class="badge badge-primary">Claude Fable & Opus</span></td>
+                <td><span class="tier-multiplier">0.35x</span></td>
+                <td>$1.7500</td>
+                <td>$8.7500</td>
                 <td>200K</td>
-                <td>Unthrottled dedicated seats for persistent autonomous coding</td>
+                <td><strong>Claude Fable 5.1</strong>: Anthropic's frontier reasoning & code benchmarks champion</td>
+              </tr>
+              <tr class="pricing-row" data-tier="claude">
+                <td class="model-name-cell"><strong>claude-3-5-sonnet-20241022</strong></td>
+                <td class="group-name-cell"><span class="badge badge-primary">Claude Fable & Opus</span></td>
+                <td><span class="tier-multiplier">0.35x</span></td>
+                <td>$1.0500</td>
+                <td>$5.2500</td>
+                <td>200K</td>
+                <td>Claude 3.5 Sonnet v2: Industry standard for Cursor IDE and coding agent loops</td>
+              </tr>
+              <tr class="pricing-row" data-tier="claude">
+                <td class="model-name-cell"><strong>claude-3-5-haiku-20241022</strong></td>
+                <td class="group-name-cell"><span class="badge badge-primary">Claude Fable & Opus</span></td>
+                <td><span class="tier-multiplier">0.35x</span></td>
+                <td>$0.2800</td>
+                <td>$1.4000</td>
+                <td>200K</td>
+                <td>Claude 3.5 Haiku v2: Lightning sub-second response speeds</td>
+              </tr>
+              <tr class="pricing-row" data-tier="claude">
+                <td class="model-name-cell"><strong>claude-opus-5</strong></td>
+                <td class="group-name-cell"><span class="badge badge-primary">Claude Fable & Opus</span></td>
+                <td><span class="tier-multiplier">0.35x</span></td>
+                <td>$5.2500</td>
+                <td>$26.2500</td>
+                <td>200K</td>
+                <td>Claude Opus 5: Maximum intelligence for deep research & complex synthesis</td>
+              </tr>
+
+              <!-- 6. Claude Max (1.6x Dedicated) -->
+              <tr class="pricing-row" data-tier="claude-max">
+                <td class="model-name-cell"><strong>claude-fable / sonnet (Max Dedicated)</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(236,72,153,0.3); background: rgba(236,72,153,0.1);">Claude Max｜1.60x</span></td>
+                <td><span class="tier-multiplier" style="color: #f472b6;">1.60x</span></td>
+                <td>$8.0000</td>
+                <td>$40.0000</td>
+                <td>200K</td>
+                <td>Unthrottled dedicated enterprise seats for 24/7 continuous autonomous agent runs</td>
               </tr>
             </tbody>
           </table>
@@ -417,7 +431,7 @@
         <div class="section-header">
           <span class="badge badge-primary section-badge">Savings Calculator</span>
           <h2 class="section-title">Estimate Your Monthly Cost & Savings</h2>
-          <p class="section-subtitle">Select any model across all 6 tiers to see your exact token deduction cost.</p>
+          <p class="section-subtitle">Select any model to calculate exact token deductions with our limited-time promotional pool multipliers.</p>
         </div>
 
         <div class="calculator-card">
@@ -429,19 +443,19 @@
               </div>
 
               <div class="calc-input-group">
-                <label for="calcTier">Select Model & Tier Group</label>
+                <label for="calcTier">Select Model & Promotional Pool</label>
                 <select id="calcTier" class="calc-select">
-                  <option value="gpt-4o-mini">GPT-4o Mini — GPT 福利 (0.21x)</option>
-                  <option value="claude-3-5-sonnet" selected>Claude 3.5 Sonnet v2 — Opus 5 (0.13x)</option>
-                  <option value="claude-3-5-haiku">Claude 3.5 Haiku — Opus 5 (0.13x)</option>
-                  <option value="claude-opus-5">Claude Opus 5 — Opus 5 (0.13x)</option>
-                  <option value="gpt-4o">GPT-4o — GPT Plus (0.16x)</option>
-                  <option value="chatgpt-4o-latest">ChatGPT-4o Latest — GPT Plus (0.16x)</option>
-                  <option value="o1-mini">OpenAI o1-mini — GPT Pro (0.20x)</option>
-                  <option value="o1-preview">OpenAI o1-preview — GPT Pro (0.20x)</option>
-                  <option value="o1-flagship">OpenAI o1 Flagship — GPT Pro尊享 (0.30x)</option>
-                  <option value="o3-mini">OpenAI o3-mini — GPT Pro尊享 (0.30x)</option>
-                  <option value="claude-max">Claude 3.5 Sonnet Max — Claude Max (1.60x)</option>
+                  <option value="gpt-4o-mini">GPT-4o Mini — 尝鲜特惠 (0.21x)</option>
+                  <option value="gpt-4o">GPT-4o — Plus 进阶 (0.32x)</option>
+                  <option value="chatgpt-4o-latest">ChatGPT-4o Latest — Plus 进阶 (0.32x)</option>
+                  <option value="o1-mini">OpenAI o1-mini — Pro 专业 (0.50x)</option>
+                  <option value="o1-preview">OpenAI o1-preview — Pro 专业 (0.50x)</option>
+                  <option value="gpt-6-astra" selected>GPT-6 Astra — 尊享旗舰 (0.75x) [New]</option>
+                  <option value="o1-flagship">OpenAI o1 Flagship — 尊享旗舰 (0.75x)</option>
+                  <option value="o3-mini">OpenAI o3-mini — 尊享旗舰 (0.75x)</option>
+                  <option value="claude-fable">Claude Fable 5.1 — Claude Pool [New]</option>
+                  <option value="claude-3-5-sonnet">Claude 3.5 Sonnet v2 — Claude Pool</option>
+                  <option value="claude-max">Claude Max Dedicated (1.60x)</option>
                 </select>
               </div>
 
@@ -453,12 +467,12 @@
             <div>
               <div class="calc-result-box">
                 <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 600;">YOUR ESTIMATED COST</div>
-                <div class="calc-price" id="calcPrice">$11.70</div>
+                <div class="calc-price" id="calcPrice">$15.00</div>
                 <div style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 8px;">
-                  Official Direct Cost: <span id="calcOfficialPrice" style="text-decoration: line-through;">$90.00</span>
+                  Official Direct Cost: <span id="calcOfficialPrice" style="text-decoration: line-through;">$200.00</span>
                 </div>
                 <div id="calcSavings" style="font-weight: 700; font-size: 0.95rem;">
-                  Save 87% vs Official Direct Price!
+                  Save 25% vs Official Direct Price! (Limited-Time Quota)
                 </div>
               </div>
             </div>
@@ -490,7 +504,7 @@
             <!-- Cursor IDE -->
             <div class="guide-pane" id="guide-cursor">
               <h3>Configure Cursor IDE in 30 Seconds</h3>
-              <p style="color: var(--text-muted); margin: 8px 0 16px;">Set our gateway as your custom OpenAI provider to empower Cursor with Claude 3.5 Sonnet (v2) and GPT-4o:</p>
+              <p style="color: var(--text-muted); margin: 8px 0 16px;">Empower Cursor with <strong>GPT-6 Astra</strong> and <strong>Claude Fable 5.1</strong>:</p>
               <ol style="margin-left: 20px; color: var(--text-muted); line-height: 1.8;">
                 <li>Open Cursor <strong>Settings</strong> &rarr; <strong>Models</strong>.</li>
                 <li>Disable "Use built-in OpenAI API key".</li>
@@ -505,7 +519,7 @@
                 </button>
               </div>
               <p style="color: var(--text-muted); font-size: 0.9rem;">
-                💡 <em>Tip: Add <code>claude-3-5-sonnet-20241022</code>, <code>o1</code>, or <code>gpt-4o</code> in Cursor's model selector!</em>
+                💡 <em>Tip: Add <code>gpt-6-astra</code>, <code>claude-fable-5.1</code>, or <code>claude-3-5-sonnet-20241022</code> in Cursor's model selector!</em>
               </p>
             </div>
 
@@ -517,7 +531,7 @@
                 <div><strong>Provider:</strong> OpenAI</div>
                 <div><strong>Endpoint (Base URL):</strong> https://api.hzapi.vip/v1</div>
                 <div><strong>API Key:</strong> sk-gw-your-api-key</div>
-                <div><strong>Model:</strong> claude-3-5-sonnet-20241022, o1, o3-mini, or gpt-4o</div>
+                <div><strong>Model:</strong> gpt-6-astra, claude-fable-5.1, or o1</div>
                 <button class="code-copy-btn" data-copy="https://api.hzapi.vip/v1">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                   <span>Copy URL</span>
@@ -538,9 +552,9 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model=<span style="color: #a7f3d0;">"claude-3-5-sonnet-20241022"</span>,
+    model=<span style="color: #a7f3d0;">"gpt-6-astra"</span>,
     messages=[
-        {<span style="color: #38bdf8;">"role"</span>: <span style="color: #a7f3d0;">"user"</span>, <span style="color: #38bdf8;">"content"</span>: <span style="color: #a7f3d0;">"Write an ultra-fast REST API in Go"</span>}
+        {<span style="color: #38bdf8;">"role"</span>: <span style="color: #a7f3d0;">"user"</span>, <span style="color: #38bdf8;">"content"</span>: <span style="color: #a7f3d0;">"Build an autonomous agent for automated code testing."</span>}
     ],
     stream=<span style="color: #818cf8;">True</span>
 )
@@ -568,8 +582,8 @@ response = client.chat.completions.create(
 });
 
 <span style="color: #818cf8;">const</span> stream = <span style="color: #f472b6;">await</span> openai.chat.completions.create({
-  model: <span style="color: #a7f3d0;">'o1-mini'</span>,
-  messages: [{ role: <span style="color: #a7f3d0;">'user'</span>, content: <span style="color: #a7f3d0;">'Solve this algorithms problem step-by-step'</span> }],
+  model: <span style="color: #a7f3d0;">'claude-fable-5.1'</span>,
+  messages: [{ role: <span style="color: #a7f3d0;">'user'</span>, content: <span style="color: #a7f3d0;">'Solve this deep mathematics and logic proof'</span> }],
   stream: <span style="color: #818cf8;">true</span>,
 });
 
@@ -592,8 +606,8 @@ response = client.chat.completions.create(
   -H <span style="color: #a7f3d0;">"Content-Type: application/json"</span> \
   -H <span style="color: #a7f3d0;">"Authorization: Bearer sk-gw-your-api-key"</span> \
   -d <span style="color: #a7f3d0;">'{
-    "model": "claude-3-5-sonnet-20241022",
-    "messages": [{"role": "user", "content": "Hello!"}],
+    "model": "gpt-6-astra",
+    "messages": [{"role": "user", "content": "Hello Astra!"}],
     "stream": false
   }'</span></code></pre>
                 <button class="code-copy-btn">
@@ -626,37 +640,27 @@ response = client.chat.completions.create(
         <div class="section-header">
           <span class="badge badge-primary section-badge">Got Questions?</span>
           <h2 class="section-title">Frequently Asked Questions</h2>
-          <p class="section-subtitle">Everything you need to know about our service, billing, and integration.</p>
+          <p class="section-subtitle">Everything you need to know about our limited-time promotional pools and models.</p>
         </div>
 
         <div class="faq-list">
           <div class="faq-item open">
             <div class="faq-question">
-              <span>Which new OpenAI and Claude models are supported?</span>
+              <span>What is the Limited-Time Quota promotion?</span>
               <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-              We support all current frontier models including <strong>Claude 3.5 Sonnet (20241022 v2)</strong>, <strong>Claude 3.5 Haiku</strong>, <strong>Claude Opus 5</strong>, <strong>OpenAI o1 (Flagship)</strong>, <strong>OpenAI o3-mini</strong>, <strong>OpenAI o1-mini</strong>, <strong>GPT-4o</strong>, and <strong>ChatGPT-4o-latest</strong>.
+              The Limited-Time Quota promotion allows users to purchase token quotas at subsidized promotional pool multipliers: <strong>0.21x (尝鲜特惠)</strong>, <strong>0.32x (Plus 进阶)</strong>, <strong>0.50x (Pro 专业)</strong>, and <strong>0.75x (尊享旗舰)</strong>. Once redeemed to your account, your purchased tokens <strong>never expire</strong>, even after the promotion concludes.
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question">
-              <span>How do the 6 provider rate tiers work?</span>
+              <span>Are GPT-6 Astra and Claude Fable 5.1 supported?</span>
               <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-              We operate 6 upstream pools with distinct rate multipliers: <strong>GPT 福利 (0.21x)</strong>, <strong>Opus 5 (0.13x)</strong>, <strong>GPT Plus (0.16x)</strong>, <strong>GPT Pro (0.20x)</strong>, <strong>GPT Pro尊享 (0.30x)</strong>, and <strong>Claude Max (1.6x)</strong>. When you send a request, our gateway automatically selects the cheapest pool that supports your requested model.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question">
-              <span>Do my purchased token quotas expire?</span>
-              <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-              No. Tokens redeemed through our CDK card secrets have permanent validity and do not expire. You only consume tokens when making requests.
+              Yes! Both <strong>GPT-6 Astra</strong> (OpenAI's frontier model for agentic software engineering and computer use) and <strong>Claude Fable 5.1</strong> (Anthropic's flagship deep reasoning model) are fully supported on our gateway with full context window and streaming support.
             </div>
           </div>
 
@@ -687,11 +691,11 @@ response = client.chat.completions.create(
     <section class="cta-banner">
       <div class="container">
         <div class="cta-box">
-          <h2 class="cta-title">Ready to Supercharge Your AI Workflows?</h2>
-          <p class="cta-desc">Get your CDK quota pack today, connect to Cursor or NextChat in 30 seconds, and start building with the world's most capable AI models.</p>
+          <h2 class="cta-title">Lock in Your Promotional Quota Today</h2>
+          <p class="cta-desc">Experience GPT-6 Astra and Claude Fable 5.1 with discounted promotional pools. Connect to Cursor or NextChat in 30 seconds.</p>
           <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="#packages" class="btn btn-primary btn-lg">View Quota Packs</a>
-            <a href="#pricing" class="btn btn-outline btn-lg">Model Rates</a>
+            <a href="#packages" class="btn btn-primary btn-lg">View Promo Packs</a>
+            <a href="#pricing" class="btn btn-outline btn-lg">Promotional Pools</a>
           </div>
         </div>
       </div>
@@ -711,18 +715,18 @@ response = client.chat.completions.create(
             <span>AI Gateway</span>
           </div>
           <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 320px; line-height: 1.6;">
-            Ultra-fast, enterprise-grade AI aggregation and relay platform connecting developers to frontier foundation models with transparent token billing.
+            Ultra-fast AI aggregation platform relaying GPT-6 Astra, Claude Fable 5.1, and frontier models with transparent token billing and limited-time promotional pools.
           </p>
         </div>
 
         <div class="footer-col">
           <h4>Frontier Models</h4>
           <ul>
+            <li><a href="#pricing">GPT-6 Astra (New)</a></li>
+            <li><a href="#pricing">Claude Fable 5.1 (New)</a></li>
             <li><a href="#pricing">Claude 3.5 Sonnet v2</a></li>
             <li><a href="#pricing">OpenAI o1 & o3-mini</a></li>
             <li><a href="#pricing">GPT-4o Multimodal</a></li>
-            <li><a href="#pricing">Claude Opus 5</a></li>
-            <li><a href="#pricing">Claude 3.5 Haiku</a></li>
           </ul>
         </div>
 
@@ -751,7 +755,7 @@ response = client.chat.completions.create(
       <div class="footer-bottom">
         <div>© 2026 AI Gateway. All rights reserved.</div>
         <div style="color: var(--text-dim); font-size: 0.85rem;">
-          6 Provider Pools (0.13x - 1.6x) · Compatible with OpenAI & Anthropic API specs.
+          Promotional Pools: 0.21x / 0.32x / 0.50x / 0.75x · Limited-Time Quota Active.
         </div>
       </div>
     </div>
