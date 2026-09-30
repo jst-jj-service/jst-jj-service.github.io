@@ -84,9 +84,9 @@
         <div class="base-url-bar">
           <div style="display: flex; align-items: center; gap: 10px; overflow: hidden;">
             <span class="base-url-label">Endpoint</span>
-            <span class="base-url-text" id="gatewayUrl">https://ai-gateway-api-sw7a.onrender.com/v1</span>
+            <span class="base-url-text" id="gatewayUrl">https://jj-ai-gateway.onrender.com/v1</span>
           </div>
-          <button class="btn btn-outline btn-sm copy-btn" data-copy="https://ai-gateway-api-sw7a.onrender.com/v1" title="Copy Endpoint">
+          <button class="btn btn-outline btn-sm copy-btn" data-copy="https://jj-ai-gateway.onrender.com/v1" title="Copy Endpoint">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             <span>Copy</span>
           </button>
@@ -426,8 +426,8 @@
                 <li>Click <strong>Override OpenAI Base URL</strong> and enter:</li>
               </ol>
               <div class="code-block">
-                <code>https://ai-gateway-api-sw7a.onrender.com/v1</code>
-                <button class="code-copy-btn" data-copy="https://ai-gateway-api-sw7a.onrender.com/v1">
+                <code>https://jj-ai-gateway.onrender.com/v1</code>
+                <button class="code-copy-btn" data-copy="https://jj-ai-gateway.onrender.com/v1">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                   <span>Copy</span>
                 </button>
@@ -443,10 +443,10 @@
               <p style="color: var(--text-muted); margin: 8px 0 16px;">Works seamlessly with all modern desktop and web AI chat applications:</p>
               <div class="code-block">
                 <div><strong>Provider:</strong> OpenAI</div>
-                <div><strong>Endpoint (Base URL):</strong> https://ai-gateway-api-sw7a.onrender.com/v1</div>
+                <div><strong>Endpoint (Base URL):</strong> https://jj-ai-gateway.onrender.com/v1</div>
                 <div><strong>API Key:</strong> sk-gw-your-api-key</div>
                 <div><strong>Model:</strong> astra or sol</div>
-                <button class="code-copy-btn" data-copy="https://ai-gateway-api-sw7a.onrender.com/v1">
+                <button class="code-copy-btn" data-copy="https://jj-ai-gateway.onrender.com/v1">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                   <span>Copy URL</span>
                 </button>
@@ -462,7 +462,7 @@
 
 client = OpenAI(
     api_key=<span style="color: #a7f3d0;">"sk-gw-your-api-key"</span>,
-    base_url=<span style="color: #a7f3d0;">"https://ai-gateway-api-sw7a.onrender.com/v1"</span>
+    base_url=<span style="color: #a7f3d0;">"https://jj-ai-gateway.onrender.com/v1"</span>
 )
 
 response = client.chat.completions.create(
@@ -492,7 +492,7 @@ response = client.chat.completions.create(
 
 <span style="color: #818cf8;">const</span> openai = <span style="color: #f472b6;">new</span> OpenAI({
   apiKey: <span style="color: #a7f3d0;">'sk-gw-your-api-key'</span>,
-  baseURL: <span style="color: #a7f3d0;">'https://ai-gateway-api-sw7a.onrender.com/v1'</span>,
+  baseURL: <span style="color: #a7f3d0;">'https://jj-ai-gateway.onrender.com/v1'</span>,
 });
 
 <span style="color: #818cf8;">const</span> stream = <span style="color: #f472b6;">await</span> openai.chat.completions.create({
@@ -516,7 +516,7 @@ response = client.chat.completions.create(
               <h3>Direct HTTP / cURL Command</h3>
               <p style="color: var(--text-muted); margin: 8px 0 16px;">Test your connection in seconds using any terminal:</p>
               <div class="code-block">
-                <pre><code style="color: #e2e8f0;">curl https://ai-gateway-api-sw7a.onrender.com/v1/chat/completions \
+                <pre><code style="color: #e2e8f0;">curl https://jj-ai-gateway.onrender.com/v1/chat/completions \
   -H <span style="color: #a7f3d0;">"Content-Type: application/json"</span> \
   -H <span style="color: #a7f3d0;">"Authorization: Bearer sk-gw-your-api-key"</span> \
   -d <span style="color: #a7f3d0;">'{
@@ -538,7 +538,7 @@ response = client.chat.completions.create(
               <ol style="margin-left: 20px; color: var(--text-muted); line-height: 1.8;">
                 <li>Open <strong>CCSwitch</strong> or <strong>Cockpit</strong>.</li>
                 <li>Click <strong>Add Provider</strong> &rarr; Select <strong>Custom OpenAI</strong>.</li>
-                <li>Base URL: <code>https://ai-gateway-api-sw7a.onrender.com/v1</code></li>
+                <li>Base URL: <code>https://jj-ai-gateway.onrender.com/v1</code></li>
                 <li>Paste your Gateway API key.</li>
                 <li>Save and test connection — models populate automatically!</li>
               </ol>
