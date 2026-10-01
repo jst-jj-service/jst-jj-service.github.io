@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Gateway — High-Performance OpenAI Model Pools (0.21x – 0.75x)</title>
-  <meta name="description" content="High-performance OpenAI-compatible API gateway. Choose from 4 transparent routing pools: 0.21x, 0.32x, 0.50x, and 0.75x. Top up your platform balance and connect instantly.">
+  <title>AI Gateway — High-Performance OpenAI & Claude Model Pools</title>
+  <meta name="description" content="Production-ready AI API Gateway. Direct access to OpenAI Astra, Sol, and Anthropic Claude 3.7 Sonnet / Opus with 6 transparent routing pools (0.16x – 3.00x). Zero leaks, drop-in compatibility.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 </head>
 <body>
   <!-- Top Notification Banner -->
-  <div style="background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 100%); color: #ffffff; padding: 10px 20px; text-align: center; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.02em;">
-    ⚡ <span>OPENAI ROUTING POOLS ACTIVE: 0.21x, 0.32x, 0.50x, and 0.75x pools ready. Top up your balance to start.</span>
+  <div style="background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 50%, #8b5cf6 100%); color: #ffffff; padding: 10px 20px; text-align: center; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.02em;">
+    ⚡ <span>ACTIVE CHANNELS: OpenAI Astra & Sol (0.16x – 0.45x) & Anthropic Claude 3.7 / Opus (0.24x – 3.00x). Live 24/7 with zero-leak proxying.</span>
   </div>
 
   <!-- Ambient background lighting effects -->
@@ -35,8 +35,8 @@
         <li><a href="#pools">Routing Pools</a></li>
         <li><a href="#models">Model Directory</a></li>
         <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#quickstart">Integration Guide</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#quickstart">Integration</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
 
@@ -44,7 +44,7 @@
         <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Navigation">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
-        <a href="#how-it-works" class="btn btn-outline btn-sm">How to Top Up</a>
+        <a href="#quickstart" class="btn btn-outline btn-sm">Setup Guide</a>
         <a href="#pools" class="btn btn-primary btn-sm">Explore Pools</a>
       </div>
     </div>
@@ -57,36 +57,47 @@
         <div class="hero-badge">
           <span class="badge badge-primary">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-            4 High-Speed OpenAI Pools: 0.21x · 0.32x · 0.50x · 0.75x
+            6 High-Speed Routing Pools: OpenAI (0.16x – 0.45x) & Claude (0.24x – 3.00x)
           </span>
         </div>
 
         <h1 class="hero-title">
           High-Performance Relay for <br>
-          <span class="gradient-text">OpenAI Astra & Sol</span>
+          <span class="gradient-text">OpenAI Astra, Sol & Anthropic Claude</span>
         </h1>
 
         <p class="hero-subtitle">
-          Connect to OpenAI Astra and Sol through high-throughput routing pools. Top up your platform balance, pick the pool multiplier that matches your needs, and enjoy instant drop-in OpenAI API compatibility.
+          Connect your IDEs, CLI tools, and applications to OpenAI Astra & Sol and Anthropic Claude 3.7 Sonnet / Opus through high-throughput routing pools. Top up your platform balance, select your pool multiplier, and enjoy instant drop-in OpenAI and Anthropic API compatibility.
         </p>
 
         <div class="hero-actions">
           <a href="#pools" class="btn btn-primary btn-lg">
-            <span>Choose Your Pool</span>
+            <span>Explore 6 Pools</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#how-it-works" class="btn btn-outline btn-lg">
-            <span>How to Top Up</span>
+          <a href="#quickstart" class="btn btn-outline btn-lg">
+            <span>Integration Guides</span>
           </a>
         </div>
 
         <!-- Quick Base URL Copy Box -->
-        <div class="base-url-bar">
-          <div style="display: flex; align-items: center; gap: 10px; overflow: hidden;">
-            <span class="base-url-label">Endpoint</span>
-            <span class="base-url-text" id="gatewayUrl">https://jj-ai-gateway.onrender.com/v1</span>
+        <div class="base-url-bar" style="margin-top: 28px;">
+          <div style="display: flex; align-items: center; gap: 10px; overflow: hidden; flex-wrap: wrap;">
+            <span class="base-url-label">OpenAI Endpoint</span>
+            <span class="base-url-text">https://jj-ai-gateway.onrender.com/v1</span>
           </div>
-          <button class="btn btn-outline btn-sm copy-btn" data-copy="https://jj-ai-gateway.onrender.com/v1" title="Copy Endpoint">
+          <button class="btn btn-outline btn-sm copy-btn" data-copy="https://jj-ai-gateway.onrender.com/v1" title="Copy OpenAI Endpoint">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <div class="base-url-bar" style="margin-top: 10px;">
+          <div style="display: flex; align-items: center; gap: 10px; overflow: hidden; flex-wrap: wrap;">
+            <span class="base-url-label" style="background: rgba(139,92,246,0.2); color: #c4b5fd;">Claude Endpoint</span>
+            <span class="base-url-text">https://jj-ai-gateway.onrender.com</span>
+          </div>
+          <button class="btn btn-outline btn-sm copy-btn" data-copy="https://jj-ai-gateway.onrender.com" title="Copy Claude Endpoint">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             <span>Copy</span>
           </button>
@@ -94,11 +105,12 @@
 
         <!-- Models Pill Strip -->
         <div class="models-ticker">
-          <div class="model-pill"><span class="model-pill-dot" style="background:#a78bfa;"></span> <strong>Astra Flagship</strong></div>
-          <div class="model-pill"><span class="model-pill-dot" style="background:#fcd34d;"></span> <strong>Sol Reasoning</strong></div>
-          <div class="model-pill"><span class="model-pill-dot" style="background:#06b6d4;"></span> Plus Pool (0.32x)</div>
-          <div class="model-pill"><span class="model-pill-dot" style="background:#10b981;"></span> Starter Promo (0.21x)</div>
-          <div class="model-pill" style="opacity: 0.8; border-color: rgba(139,92,246,0.3);"><span class="model-pill-dot" style="background:#f472b6;"></span> Claude & Anthropic (Coming Soon)</div>
+          <div class="model-pill"><span class="model-pill-dot" style="background:#a78bfa;"></span> <strong>Astra Flagship</strong> (0.45x)</div>
+          <div class="model-pill"><span class="model-pill-dot" style="background:#fcd34d;"></span> <strong>Sol Reasoning</strong> (0.45x)</div>
+          <div class="model-pill"><span class="model-pill-dot" style="background:#f472b6;"></span> <strong>Claude 3.7 Sonnet</strong> (3.00x)</div>
+          <div class="model-pill"><span class="model-pill-dot" style="background:#818cf8;"></span> <strong>Claude Opus 5</strong> (0.24x)</div>
+          <div class="model-pill"><span class="model-pill-dot" style="background:#06b6d4;"></span> Plus Pool (0.325x)</div>
+          <div class="model-pill"><span class="model-pill-dot" style="background:#10b981;"></span> Starter Pool (0.16x)</div>
         </div>
       </div>
     </section>
@@ -111,122 +123,163 @@
           <p>Average First Token Latency</p>
         </div>
         <div class="stat-item">
-          <h3 class="gradient-text">0.21x – 0.75x</h3>
-          <p>Flexible Pool Multipliers</p>
+          <h3 class="gradient-text">0.16x – 3.00x</h3>
+          <p>6 Dedicated Pool Multipliers</p>
         </div>
         <div class="stat-item">
           <h3 class="gradient-text-accent">99.9%</h3>
-          <p>High-Availability Uptime</p>
+          <p>High-Availability Uptime SLA</p>
         </div>
         <div class="stat-item">
-          <h3 class="gradient-text">Pay As You Go</h3>
-          <p>Platform Balance Top-Up</p>
+          <h3 class="gradient-text">Dual Engine</h3>
+          <p>OpenAI & Anthropic Compatible</p>
         </div>
       </div>
     </section>
 
-    <!-- The 4 Routing Pools Section -->
+    <!-- The 6 Routing Pools Section -->
     <section class="section" id="pools">
       <div class="container">
         <div class="section-header">
           <span class="badge badge-primary section-badge">⚡ Transparent Multipliers</span>
-          <h2 class="section-title">Select Your OpenAI Routing Pool</h2>
-          <p class="section-subtitle">Top up your balance on our platform and route your requests through the pool that best matches your speed and workload requirements.</p>
+          <h2 class="section-title">Select Your Routing Pool</h2>
+          <p class="section-subtitle">Top up your balance on our platform and route your requests through the pool that best matches your model preference and workload speed.</p>
         </div>
 
         <div class="pools-grid">
-          <!-- Pool 1: 0.21x Starter Pool -->
+          <!-- Pool 1: 0.16x Starter Pool -->
           <div class="pool-card">
             <div>
-              <span class="badge" style="border-color: rgba(16,185,129,0.3); color: #34d399; background: rgba(16,185,129,0.1);">Starter Pool</span>
+              <span class="badge" style="border-color: rgba(16,185,129,0.3); color: #34d399; background: rgba(16,185,129,0.1);">OpenAI Starter</span>
               <div class="pool-rate-box">
-                <div class="pool-multiplier" style="color: #34d399;">0.21x</div>
+                <div class="pool-multiplier" style="color: #34d399;">0.16x</div>
                 <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
               </div>
-              <p class="pool-desc">Ultra-economical promotional quota pool for high-frequency automated tasks and lightweight operations.</p>
+              <p class="pool-desc">Ultra-economical promotional pool for high-frequency automated tasks, lightweight bots, and background tasks.</p>
               
               <div class="pool-models-title">Available Models</div>
               <ul class="pool-models-list">
-                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>Starter Quota</code> Fast & lightweight automation</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>gpt-4o-mini</code> Lightweight flagship</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>gpt-5.4-mini</code> Next-gen mini suite</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>gpt-5.5</code> Balanced efficiency</li>
               </ul>
             </div>
-            <a href="#how-it-works" class="btn btn-outline" style="width: 100%;">
-              Use 0.21x Pool
-            </a>
+            <a href="#how-it-works" class="btn btn-outline" style="width: 100%;">Use 0.16x Pool</a>
           </div>
 
-          <!-- Pool 2: 0.32x Plus Pool (Featured) -->
+          <!-- Pool 2: 0.325x Plus Pool -->
+          <div class="pool-card">
+            <div>
+              <span class="badge" style="border-color: rgba(6,182,212,0.3); color: #38bdf8; background: rgba(6,182,212,0.1);">OpenAI Plus</span>
+              <div class="pool-rate-box">
+                <div class="pool-multiplier" style="color: #38bdf8;">0.325x</div>
+                <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
+              </div>
+              <p class="pool-desc">Standard high-throughput development pool for everyday coding assistants, production services, and chat apps.</p>
+              
+              <div class="pool-models-title">Available Models</div>
+              <ul class="pool-models-list">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>gpt-4o</code> Full flagship intelligence</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>chatgpt-4o-latest</code> Dynamic release</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>gpt-5.6</code> Enhanced core model</li>
+              </ul>
+            </div>
+            <a href="#how-it-works" class="btn btn-outline" style="width: 100%;">Use 0.325x Pool</a>
+          </div>
+
+          <!-- Pool 3: 0.45x Pro Pool (Sol) -->
           <div class="pool-card featured">
-            <span class="badge badge-primary pool-badge-top">⭐ Most Popular</span>
+            <span class="badge badge-primary pool-badge-top">⭐ Sol Reasoning</span>
             <div>
-              <span class="badge badge-primary">Plus Pool</span>
+              <span class="badge" style="border-color: rgba(245,158,11,0.3); color: #fcd34d; background: rgba(245,158,11,0.1);">OpenAI Pro (Sol)</span>
               <div class="pool-rate-box">
-                <div class="pool-multiplier gradient-text">0.32x</div>
+                <div class="pool-multiplier" style="color: #fcd34d;">0.45x</div>
                 <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
               </div>
-              <p class="pool-desc">Standard high-throughput development channel for Cursor IDE, coding assistants, and daily production tasks.</p>
+              <p class="pool-desc">Dedicated deep reasoning pool featuring Sol and Terra for competitive coding, mathematics, and STEM logic.</p>
               
               <div class="pool-models-title">Available Models</div>
               <ul class="pool-models-list">
-                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>Plus Quota</code> High-concurrency coding & development</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>sol</code> / <code>gpt-5.6-sol</code> Deep reasoning</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>terra</code> / <code>gpt-5.6-terra</code> Extended context</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>o1-mini</code> Reasoning preview</li>
               </ul>
             </div>
-            <a href="#how-it-works" class="btn btn-primary" style="width: 100%;">
-              Use 0.32x Pool
-            </a>
+            <a href="#how-it-works" class="btn btn-primary" style="width: 100%;">Use 0.45x Sol Pool</a>
           </div>
 
-          <!-- Pool 3: 0.50x Pro Pool -->
+          <!-- Pool 4: 0.45x Flagship Pro Pool (Astra) -->
           <div class="pool-card">
             <div>
-              <span class="badge" style="border-color: rgba(245,158,11,0.3); color: #fcd34d; background: rgba(245,158,11,0.1);">Pro Pool</span>
+              <span class="badge" style="border-color: rgba(139,92,246,0.4); color: #a78bfa; background: rgba(139,92,246,0.15);">OpenAI Flagship (Astra)</span>
               <div class="pool-rate-box">
-                <div class="pool-multiplier" style="color: #fcd34d;">0.50x</div>
+                <div class="pool-multiplier" style="color: #a78bfa;">0.45x</div>
                 <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
               </div>
-              <p class="pool-desc">Dedicated reasoning pool for complex mathematics, algorithm architecture, and STEM tasks.</p>
+              <p class="pool-desc">Frontier flagship pool featuring Astra and OpenAI o1 for complex multi-step reasoning, agents, and tool use.</p>
               
               <div class="pool-models-title">Available Models</div>
               <ul class="pool-models-list">
-                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>Sol</code> Deep reasoning & STEM architecture</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>astra</code> / <code>gpt-6-astra</code> Frontier flagship</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>o1</code> / <code>o1-2024-12-17</code> Deep thinking</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>o3-mini</code> Ultra-fast reasoning</li>
               </ul>
             </div>
-            <a href="#how-it-works" class="btn btn-outline" style="width: 100%;">
-              Use 0.50x Pool
-            </a>
+            <a href="#how-it-works" class="btn btn-outline" style="width: 100%;">Use 0.45x Astra Pool</a>
           </div>
 
-          <!-- Pool 4: 0.75x Flagship Pro Pool -->
+          <!-- Pool 5: 0.24x Claude Standard Pool -->
           <div class="pool-card">
             <div>
-              <span class="badge" style="border-color: rgba(139,92,246,0.4); color: #a78bfa; background: rgba(139,92,246,0.15);">Flagship Pro Pool</span>
+              <span class="badge" style="border-color: rgba(244,114,182,0.3); color: #f472b6; background: rgba(244,114,182,0.1);">Claude Standard</span>
               <div class="pool-rate-box">
-                <div class="pool-multiplier" style="color: #a78bfa;">0.75x</div>
+                <div class="pool-multiplier" style="color: #f472b6;">0.24x</div>
                 <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
               </div>
-              <p class="pool-desc">Full access to official OpenAI frontier reasoning models with high limits and maximum reasoning capability.</p>
+              <p class="pool-desc">Anthropic Claude intelligence suite featuring Claude Opus 5, Sonnet 5, Fable 5, and Haiku 4.5.</p>
               
               <div class="pool-models-title">Available Models</div>
               <ul class="pool-models-list">
-                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>Astra</code> Frontier flagship multi-step reasoning</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>claude-opus-5</code> Premier analysis</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>claude-sonnet-5</code> Creative coding</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>fable</code> / <code>claude-fable-5</code> Narrative</li>
               </ul>
             </div>
-            <a href="#how-it-works" class="btn btn-outline" style="width: 100%;">
-              Use 0.75x Pool
-            </a>
+            <a href="#how-it-works" class="btn btn-outline" style="width: 100%;">Use 0.24x Claude Pool</a>
+          </div>
+
+          <!-- Pool 6: 3.00x Claude Max Pool -->
+          <div class="pool-card featured" style="border-color: rgba(236,72,153,0.6); background: linear-gradient(180deg, rgba(236,72,153,0.12) 0%, rgba(17, 24, 39, 0.85) 100%);">
+            <span class="badge badge-primary pool-badge-top" style="background: rgba(236,72,153,0.25); color: #fbcfe8; border-color: rgba(236,72,153,0.5);">🔥 Claude 3.7 Thinking</span>
+            <div>
+              <span class="badge" style="border-color: rgba(236,72,153,0.4); color: #f472b6; background: rgba(236,72,153,0.15);">Claude Max</span>
+              <div class="pool-rate-box">
+                <div class="pool-multiplier" style="color: #f472b6;">3.00x</div>
+                <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
+              </div>
+              <p class="pool-desc">Top-tier Anthropic flagship models with hybrid thinking for complex agentic workflows, refactors, and Claude Code CLI.</p>
+              
+              <div class="pool-models-title">Available Models</div>
+              <ul class="pool-models-list">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>claude-3-7-sonnet-20250219</code> Hybrid thinking</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>claude-3-5-sonnet-20241022</code> High-accuracy code</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>claude-max</code> Max unthrottled quota</li>
+              </ul>
+            </div>
+            <a href="#how-it-works" class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);">Use 3.00x Claude Max</a>
           </div>
         </div>
 
-        <!-- Claude & Other APIs Coming Soon Banner -->
-        <div class="coming-soon-banner">
+        <!-- Claude Support Active Feature Banner -->
+        <div class="coming-soon-banner" style="background: linear-gradient(90deg, rgba(79,70,229,0.15) 0%, rgba(236,72,153,0.15) 100%); border-color: rgba(236,72,153,0.3);">
           <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-            <span class="coming-soon-badge">Coming Soon</span>
+            <span class="coming-soon-badge" style="background: #ec4899; color: #ffffff;">Active Now</span>
             <div>
-              <h3 style="font-size: 1.15rem; color: #f8fafc; margin-bottom: 4px;">Anthropic Claude & Additional AI Providers</h3>
-              <p style="color: var(--text-muted); font-size: 0.9rem;">Direct upstream integration for Claude 3.5 Sonnet, Claude 3.5 Haiku, and Claude Opus is currently in progress.</p>
+              <h3 style="font-size: 1.15rem; color: #f8fafc; margin-bottom: 4px;">Claude Code CLI & Anthropic Messages API Support</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">Configure <code>ANTHROPIC_BASE_URL="https://jj-ai-gateway.onrender.com"</code> and your gateway API key to run Claude Code, Cline, and Anthropic SDKs seamlessly.</p>
             </div>
           </div>
-          <a href="#how-it-works" class="btn btn-outline btn-sm">Get Notified</a>
+          <a href="#quickstart" class="btn btn-outline btn-sm">View Setup Guide</a>
         </div>
       </div>
     </section>
@@ -235,73 +288,135 @@
     <section class="section" id="models" style="background: rgba(0, 0, 0, 0.2);">
       <div class="container">
         <div class="section-header">
-          <span class="badge badge-primary section-badge">OpenAI Model Directory</span>
-          <h2 class="section-title">Transparent Pool Multipliers & Model Mapping</h2>
-          <p class="section-subtitle">Browse models supported across our 4 routing pools. Your account balance is deducted strictly according to the active pool multiplier.</p>
+          <span class="badge badge-primary section-badge">Supported Models</span>
+          <h2 class="section-title">Directory of Supported Models & Pool Multipliers</h2>
+          <p class="section-subtitle">Browse models supported across our 6 routing pools. Your platform balance is deducted strictly according to the active pool multiplier.</p>
         </div>
 
         <!-- Filter Controls -->
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
           <div class="pricing-tabs">
             <button class="tab-btn pricing-tab-btn active" data-tier="all">All Pools</button>
-            <button class="tab-btn pricing-tab-btn" data-tier="0.21">Starter (0.21x)</button>
-            <button class="tab-btn pricing-tab-btn" data-tier="0.32">Plus (0.32x)</button>
-            <button class="tab-btn pricing-tab-btn" data-tier="0.5">Pro (0.50x)</button>
-            <button class="tab-btn pricing-tab-btn" data-tier="0.75">Flagship (0.75x)</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="starter">Starter (0.16x)</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="plus">Plus (0.325x)</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="sol">Sol Reasoning (0.45x)</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="astra">Astra Flagship (0.45x)</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="claude-std">Claude Standard (0.24x)</button>
+            <button class="tab-btn pricing-tab-btn" data-tier="claude-max">Claude Max (3.00x)</button>
           </div>
 
-          <div style="min-width: 260px;">
-            <input type="text" id="modelSearchInput" class="calc-input" placeholder="🔍 Search model (e.g. Astra, Sol...)" style="padding: 8px 14px; font-size: 0.9rem;">
+          <div style="position: relative; min-width: 260px;">
+            <input type="text" id="modelSearchInput" class="calc-input" placeholder="Search models or pools..." style="padding-left: 36px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-dim);"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
         </div>
 
-        <!-- Table -->
         <div class="pricing-table-container">
           <table class="pricing-table">
             <thead>
               <tr>
-                <th>Model & API ID</th>
+                <th>Model Identifier</th>
                 <th>Routing Pool</th>
-                <th>Multiplier</th>
+                <th>Deduction Multiplier</th>
                 <th>Context Window</th>
-                <th>Description</th>
+                <th>Target Use Case</th>
               </tr>
             </thead>
-            <tbody>
-              <!-- 0.75x Flagship Pro Pool: Astra -->
-              <tr class="pricing-row" data-tier="0.75">
-                <td class="model-name-cell"><strong>Astra</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">Flagship Pool (0.75x)</span></td>
-                <td><span class="tier-multiplier" style="color: #a78bfa;">0.75x</span></td>
+            <tbody id="pricingTableBody">
+              <!-- Claude Max Tier -->
+              <tr class="pricing-row" data-tier="claude-max">
+                <td class="model-name-cell"><strong>claude-3-7-sonnet-20250219</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(236,72,153,0.3); background: rgba(236,72,153,0.1);">Claude Max (3.00x)</span></td>
+                <td><span class="tier-multiplier" style="color: #f472b6;">3.00x</span></td>
                 <td>200K</td>
-                <td>Frontier flagship intelligence, sustained reasoning, and complex multi-step workflows</td>
+                <td>Premier Anthropic hybrid reasoning & coding intelligence for Claude Code CLI and complex agents</td>
+              </tr>
+              <tr class="pricing-row" data-tier="claude-max">
+                <td class="model-name-cell"><strong>claude-3-5-sonnet-20241022</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(236,72,153,0.3); background: rgba(236,72,153,0.1);">Claude Max (3.00x)</span></td>
+                <td><span class="tier-multiplier" style="color: #f472b6;">3.00x</span></td>
+                <td>200K</td>
+                <td>High-precision coding, multi-turn architecture refactoring, and tool calling</td>
               </tr>
 
-              <!-- 0.50x Pro Pool: Sol -->
-              <tr class="pricing-row" data-tier="0.5">
-                <td class="model-name-cell"><strong>Sol</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">Pro Pool (0.50x)</span></td>
-                <td><span class="tier-multiplier" style="color: #fcd34d;">0.50x</span></td>
-                <td>128K</td>
-                <td>High-performance deep reasoning, STEM analysis, and complex software architecture</td>
+              <!-- Astra Tier -->
+              <tr class="pricing-row" data-tier="astra">
+                <td class="model-name-cell"><strong>astra / gpt-6-astra</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">Flagship Pro Pool (0.45x)</span></td>
+                <td><span class="tier-multiplier" style="color: #a78bfa;">0.45x</span></td>
+                <td>200K</td>
+                <td>OpenAI frontier flagship intelligence for sustained multi-step reasoning, agents, and complex coding</td>
+              </tr>
+              <tr class="pricing-row" data-tier="astra">
+                <td class="model-name-cell"><strong>o1 / o1-2024-12-17</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">Flagship Pro Pool (0.45x)</span></td>
+                <td><span class="tier-multiplier" style="color: #a78bfa;">0.45x</span></td>
+                <td>200K</td>
+                <td>Full OpenAI reasoning model for PhD-level mathematics, science, and difficult code algorithms</td>
+              </tr>
+              <tr class="pricing-row" data-tier="astra">
+                <td class="model-name-cell"><strong>o3-mini</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">Flagship Pro Pool (0.45x)</span></td>
+                <td><span class="tier-multiplier" style="color: #a78bfa;">0.45x</span></td>
+                <td>200K</td>
+                <td>Next-generation high-speed reasoning model optimized for coding competitions and math</td>
               </tr>
 
-              <!-- 0.32x Plus Pool -->
-              <tr class="pricing-row" data-tier="0.32">
-                <td class="model-name-cell"><strong>Plus Tier</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #67e8f9; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">Plus Pool (0.32x)</span></td>
-                <td><span class="tier-multiplier" style="color: #67e8f9;">0.32x</span></td>
+              <!-- Sol Tier -->
+              <tr class="pricing-row" data-tier="sol">
+                <td class="model-name-cell"><strong>sol / gpt-5.6-sol</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">Pro Reasoning Pool (0.45x)</span></td>
+                <td><span class="tier-multiplier" style="color: #fcd34d;">0.45x</span></td>
                 <td>128K</td>
-                <td>High-throughput everyday development channel for Cursor IDE and coding assistants</td>
+                <td>High-performance deep reasoning model for competitive coding, STEM analysis, and architecture</td>
+              </tr>
+              <tr class="pricing-row" data-tier="sol">
+                <td class="model-name-cell"><strong>terra / gpt-5.6-terra</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">Pro Reasoning Pool (0.45x)</span></td>
+                <td><span class="tier-multiplier" style="color: #fcd34d;">0.45x</span></td>
+                <td>128K</td>
+                <td>High-concurrency STEM and reasoning workhorse</td>
               </tr>
 
-              <!-- 0.21x Starter Pool -->
-              <tr class="pricing-row" data-tier="0.21">
-                <td class="model-name-cell"><strong>Starter Tier</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #34d399; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);">Starter Pool (0.21x)</span></td>
-                <td><span class="tier-multiplier" style="color: #34d399;">0.21x</span></td>
+              <!-- Claude Standard Tier -->
+              <tr class="pricing-row" data-tier="claude-std">
+                <td class="model-name-cell"><strong>claude-opus-5</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(244,114,182,0.3); background: rgba(244,114,182,0.1);">Claude Standard (0.24x)</span></td>
+                <td><span class="tier-multiplier" style="color: #f472b6;">0.24x</span></td>
+                <td>200K</td>
+                <td>Top-tier analysis, deep writing, creative architecture, and thoughtful comprehension</td>
+              </tr>
+              <tr class="pricing-row" data-tier="claude-std">
+                <td class="model-name-cell"><strong>claude-sonnet-5 / fable</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(244,114,182,0.3); background: rgba(244,114,182,0.1);">Claude Standard (0.24x)</span></td>
+                <td><span class="tier-multiplier" style="color: #f472b6;">0.24x</span></td>
+                <td>200K</td>
+                <td>Balanced speed and high intelligence for software engineering and narrative creation</td>
+              </tr>
+
+              <!-- Plus Tier -->
+              <tr class="pricing-row" data-tier="plus">
+                <td class="model-name-cell"><strong>gpt-4o / chatgpt-4o-latest</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #38bdf8; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">Plus Pool (0.325x)</span></td>
+                <td><span class="tier-multiplier" style="color: #38bdf8;">0.325x</span></td>
                 <td>128K</td>
-                <td>Ultra-economical promotional quota for high-frequency, lightweight automated operations</td>
+                <td>General-purpose multimodal intelligence for high-throughput daily coding in Cursor & VS Code</td>
+              </tr>
+              <tr class="pricing-row" data-tier="plus">
+                <td class="model-name-cell"><strong>gpt-5.6 / gpt-5.2</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #38bdf8; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">Plus Pool (0.325x)</span></td>
+                <td><span class="tier-multiplier" style="color: #38bdf8;">0.325x</span></td>
+                <td>128K</td>
+                <td>Next-generation conversational and development workhorse suite</td>
+              </tr>
+
+              <!-- Starter Tier -->
+              <tr class="pricing-row" data-tier="starter">
+                <td class="model-name-cell"><strong>gpt-4o-mini / gpt-5.4-mini</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #34d399; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);">Starter Pool (0.16x)</span></td>
+                <td><span class="tier-multiplier" style="color: #34d399;">0.16x</span></td>
+                <td>128K</td>
+                <td>Ultra-economical quota for high-frequency automation, testing pipelines, and lightweight tasks</td>
               </tr>
             </tbody>
           </table>
@@ -315,7 +430,7 @@
         <div class="section-header">
           <span class="badge badge-primary section-badge">Token Quota Estimator</span>
           <h2 class="section-title">Estimate Your Monthly Quota Usage</h2>
-          <p class="section-subtitle">Input your estimated consumption to see exactly how tokens are deducted based on your selected pool multiplier.</p>
+          <p class="section-subtitle">Input your estimated raw consumption to see exactly how tokens are deducted based on your selected pool multiplier.</p>
         </div>
 
         <div class="calculator-card">
@@ -329,27 +444,287 @@
               <div class="calc-input-group">
                 <label for="calcTier">Select Routing Pool</label>
                 <select id="calcTier" class="calc-select">
-                  <option value="0.21">Starter Pool (0.21x Multiplier)</option>
-                  <option value="0.32" selected>Plus Pool (0.32x Multiplier)</option>
-                  <option value="0.5">Pro Reasoning Pool (0.50x Multiplier)</option>
-                  <option value="0.75">Flagship Pro Pool (0.75x Multiplier)</option>
+                  <option value="0.1625">Starter Pool (0.16x Multiplier) — gpt-4o-mini</option>
+                  <option value="0.325" selected>Plus Pool (0.325x Multiplier) — gpt-4o</option>
+                  <option value="0.45-pro">Pro Reasoning Pool (0.45x Multiplier) — Sol & Terra</option>
+                  <option value="0.45-flagship">Flagship Pro Pool (0.45x Multiplier) — Astra & o1</option>
+                  <option value="0.24">Claude Standard Pool (0.24x Multiplier) — Claude Opus 5</option>
+                  <option value="3.00">Claude Max Pool (3.00x Multiplier) — Claude 3.7 Sonnet</option>
                 </select>
               </div>
 
               <div style="font-size: 0.85rem; color: var(--text-dim);">
-                * Prompt caching discounts apply automatically on repeated input context prompts.
+                * Prompt caching discounts apply automatically on repeated input context prompts across both OpenAI and Claude endpoints.
               </div>
             </div>
 
             <div>
               <div class="calc-result-box">
                 <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 600;">ESTIMATED ACCOUNT BALANCE DEDUCTION</div>
-                <div class="calc-price" id="calcDeductedTokens">3.20M Tokens</div>
+                <div class="calc-price" id="calcDeductedTokens">3.25M Tokens</div>
                 <div id="calcMultiplierDisplay" style="font-size: 1.05rem; font-weight: 700; color: #38bdf8; margin-bottom: 8px;">
-                  0.32x Multiplier
+                  0.325x Multiplier
                 </div>
                 <div id="calcSummaryText" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
-                  Consuming 10M raw tokens in the Plus Pool deducts 3.20M from your account balance.
+                  Consuming 10M raw tokens in the Plus Pool deducts 3.25M from your account balance.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Integration & Setup Guides -->
+    <section class="section" id="quickstart">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary section-badge">Complete Setup Guides</span>
+          <h2 class="section-title">Connect Any Tool in Under 60 Seconds</h2>
+          <p class="section-subtitle">Drop-in compatibility with Claude Code, Cursor IDE, Cline, Python, TypeScript, and cURL. Zero code changes required.</p>
+        </div>
+
+        <div class="guide-container">
+          <div class="guide-nav">
+            <div class="guide-nav-item active" data-guide="claude-code">Claude Code CLI</div>
+            <div class="guide-nav-item" data-guide="cursor">Cursor IDE</div>
+            <div class="guide-nav-item" data-guide="anthropic-python">Anthropic Python SDK</div>
+            <div class="guide-nav-item" data-guide="anthropic-node">Anthropic Node.js SDK</div>
+            <div class="guide-nav-item" data-guide="openai-python">OpenAI Python SDK</div>
+            <div class="guide-nav-item" data-guide="openai-node">OpenAI Node.js SDK</div>
+            <div class="guide-nav-item" data-guide="cline">Cline & Roo-Code</div>
+            <div class="guide-nav-item" data-guide="curl">cURL (OpenAI & Claude)</div>
+          </div>
+
+          <div class="guide-content">
+            <!-- Claude Code CLI -->
+            <div class="guide-pane" id="guide-claude-code">
+              <h3>Claude Code CLI Setup</h3>
+              <p style="color: var(--text-muted); margin: 8px 0 16px;">Configure Claude Code to use AI Gateway as its backend relay in one terminal command:</p>
+              
+              <div style="margin-bottom: 16px;">
+                <p style="color: #94a3b8; font-weight: 600; margin-bottom: 6px;">Option A: Export Environment Variables (macOS / Linux / WSL):</p>
+                <div class="code-block">
+                  <pre><code style="color: #e2e8f0;"><span style="color: #818cf8;">export</span> ANTHROPIC_BASE_URL=<span style="color: #a7f3d0;">"https://jj-ai-gateway.onrender.com"</span>
+<span style="color: #818cf8;">export</span> ANTHROPIC_API_KEY=<span style="color: #a7f3d0;">"sk-gw-your-api-key"</span>
+
+<span style="color: #64748b;"># Launch Claude Code:</span>
+claude</code></pre>
+                  <button class="code-copy-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <p style="color: #94a3b8; font-weight: 600; margin-bottom: 6px;">Option B: Windows PowerShell:</p>
+                <div class="code-block">
+                  <pre><code style="color: #e2e8f0;">$env:ANTHROPIC_BASE_URL=<span style="color: #a7f3d0;">"https://jj-ai-gateway.onrender.com"</span>
+$env:ANTHROPIC_API_KEY=<span style="color: #a7f3d0;">"sk-gw-your-api-key"</span>
+claude</code></pre>
+                  <button class="code-copy-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 14px;">
+                💡 <em>Claude Code will automatically route through the Claude Max pool (<code>claude-3-7-sonnet-20250219</code>) with full hybrid thinking support!</em>
+              </p>
+            </div>
+
+            <!-- Cursor IDE -->
+            <div class="guide-pane" id="guide-cursor" style="display: none;">
+              <h3>Configure Cursor IDE in 30 Seconds</h3>
+              <p style="color: var(--text-muted); margin: 8px 0 16px;">Supercharge Cursor with OpenAI Astra, Sol, and Claude models:</p>
+              <ol style="margin-left: 20px; color: var(--text-muted); line-height: 1.8;">
+                <li>Open Cursor <strong>Settings</strong> &rarr; <strong>Models</strong>.</li>
+                <li>Disable "Use built-in OpenAI API key".</li>
+                <li>Toggle on <strong>OpenAI API Key</strong> and paste your Gateway API key (<code>sk-gw-...</code>).</li>
+                <li>Click <strong>Override OpenAI Base URL</strong> and enter:</li>
+              </ol>
+              <div class="code-block">
+                <code>https://jj-ai-gateway.onrender.com/v1</code>
+                <button class="code-copy-btn" data-copy="https://jj-ai-gateway.onrender.com/v1">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">
+                💡 <em>Tip: Add <code>astra</code> or <code>sol</code> or <code>claude-3-7-sonnet-20250219</code> in Cursor's model selector!</em>
+              </p>
+            </div>
+
+            <!-- Anthropic Python SDK -->
+            <div class="guide-pane" id="guide-anthropic-python" style="display: none;">
+              <h3>Anthropic Python SDK (Claude 3.7 Sonnet)</h3>
+              <p style="color: var(--text-muted); margin: 8px 0 16px;">Call Claude using the official <code>anthropic</code> Python package:</p>
+              <div class="code-block">
+                <pre><code style="color: #e2e8f0;"><span style="color: #f472b6;">import</span> anthropic
+
+client = anthropic.Anthropic(
+    api_key=<span style="color: #a7f3d0;">"sk-gw-your-api-key"</span>,
+    base_url=<span style="color: #a7f3d0;">"https://jj-ai-gateway.onrender.com"</span>
+)
+
+message = client.messages.create(
+    model=<span style="color: #a7f3d0;">"claude-3-7-sonnet-20250219"</span>,
+    max_tokens=<span style="color: #fcd34d;">1024</span>,
+    messages=[
+        {<span style="color: #38bdf8;">"role"</span>: <span style="color: #a7f3d0;">"user"</span>, <span style="color: #38bdf8;">"content"</span>: <span style="color: #a7f3d0;">"Explain quantum computing concisely."</span>}
+    ]
+)
+
+print(message.content[<span style="color: #fcd34d;">0</span>].text)</code></pre>
+                <button class="code-copy-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>Copy Code</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Anthropic Node.js SDK -->
+            <div class="guide-pane" id="guide-anthropic-node" style="display: none;">
+              <h3>Anthropic Node.js / TypeScript SDK</h3>
+              <p style="color: var(--text-muted); margin: 8px 0 16px;">Works with the standard npm <code>@anthropic-ai/sdk</code> package:</p>
+              <div class="code-block">
+                <pre><code style="color: #e2e8f0;"><span style="color: #f472b6;">import</span> Anthropic <span style="color: #f472b6;">from</span> <span style="color: #a7f3d0;">'@anthropic-ai/sdk'</span>;
+
+<span style="color: #818cf8;">const</span> anthropic = <span style="color: #f472b6;">new</span> Anthropic({
+  apiKey: <span style="color: #a7f3d0;">'sk-gw-your-api-key'</span>,
+  baseURL: <span style="color: #a7f3d0;">'https://jj-ai-gateway.onrender.com'</span>,
+});
+
+<span style="color: #818cf8;">const</span> message = <span style="color: #f472b6;">await</span> anthropic.messages.create({
+  model: <span style="color: #a7f3d0;">'claude-3-7-sonnet-20250219'</span>,
+  max_tokens: <span style="color: #fcd34d;">1024</span>,
+  messages: [{ role: <span style="color: #a7f3d0;">'user'</span>, content: <span style="color: #a7f3d0;">'Write a TypeScript decorator for caching'</span> }],
+});
+
+console.log(message.content[<span style="color: #fcd34d;">0</span>].text);</code></pre>
+                <button class="code-copy-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>Copy Code</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Python OpenAI SDK -->
+            <div class="guide-pane" id="guide-openai-python" style="display: none;">
+              <h3>Official Python OpenAI SDK</h3>
+              <p style="color: var(--text-muted); margin: 8px 0 16px;">Initialize the official OpenAI library with our gateway base URL:</p>
+              <div class="code-block">
+                <pre><code style="color: #e2e8f0;"><span style="color: #f472b6;">from</span> openai <span style="color: #f472b6;">import</span> OpenAI
+
+client = OpenAI(
+    api_key=<span style="color: #a7f3d0;">"sk-gw-your-api-key"</span>,
+    base_url=<span style="color: #a7f3d0;">"https://jj-ai-gateway.onrender.com/v1"</span>
+)
+
+response = client.chat.completions.create(
+    model=<span style="color: #a7f3d0;">"astra"</span>,  <span style="color: #64748b;"># or "sol", "gpt-4o", etc.</span>
+    messages=[
+        {<span style="color: #38bdf8;">"role"</span>: <span style="color: #a7f3d0;">"user"</span>, <span style="color: #38bdf8;">"content"</span>: <span style="color: #a7f3d0;">"Build an autonomous agent for code testing."</span>}
+    ],
+    stream=<span style="color: #818cf8;">True</span>
+)
+
+<span style="color: #f472b6;">for</span> chunk <span style="color: #f472b6;">in</span> response:
+    content = chunk.choices[<span style="color: #fcd34d;">0</span>].delta.content <span style="color: #f472b6;">or</span> <span style="color: #a7f3d0;">""</span>
+    print(content, end=<span style="color: #a7f3d0;">""</span>, flush=<span style="color: #818cf8;">True</span>)</code></pre>
+                <button class="code-copy-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>Copy Code</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Node.js OpenAI SDK -->
+            <div class="guide-pane" id="guide-openai-node" style="display: none;">
+              <h3>Official Node.js / TypeScript SDK</h3>
+              <p style="color: var(--text-muted); margin: 8px 0 16px;">Works with the standard npm <code>openai</code> package:</p>
+              <div class="code-block">
+                <pre><code style="color: #e2e8f0;"><span style="color: #f472b6;">import</span> OpenAI <span style="color: #f472b6;">from</span> <span style="color: #a7f3d0;">'openai'</span>;
+
+<span style="color: #818cf8;">const</span> openai = <span style="color: #f472b6;">new</span> OpenAI({
+  apiKey: <span style="color: #a7f3d0;">'sk-gw-your-api-key'</span>,
+  baseURL: <span style="color: #a7f3d0;">'https://jj-ai-gateway.onrender.com/v1'</span>,
+});
+
+<span style="color: #818cf8;">const</span> stream = <span style="color: #f472b6;">await</span> openai.chat.completions.create({
+  model: <span style="color: #a7f3d0;">'sol'</span>,  <span style="color: #64748b;">// or "astra", "gpt-4o"</span>
+  messages: [{ role: <span style="color: #a7f3d0;">'user'</span>, content: <span style="color: #a7f3d0;">'Generate a high-performance caching layer in TypeScript'</span> }],
+  stream: <span style="color: #818cf8;">true</span>,
+});
+
+<span style="color: #f472b6;">for await</span> (<span style="color: #818cf8;">const</span> chunk <span style="color: #f472b6;">of</span> stream) {
+  process.stdout.write(chunk.choices[<span style="color: #fcd34d;">0</span>]?.delta?.content || <span style="color: #a7f3d0;">''</span>);
+}</code></pre>
+                <button class="code-copy-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>Copy Code</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Cline & Roo-Code -->
+            <div class="guide-pane" id="guide-cline" style="display: none;">
+              <h3>Cline, Roo-Code & Windsurf Setup</h3>
+              <p style="color: var(--text-muted); margin: 8px 0 16px;">Configure autonomous coding agents in VS Code / Windsurf:</p>
+              <div class="code-block">
+                <div><strong>Provider:</strong> Anthropic Compatible (or OpenAI Compatible)</div>
+                <div><strong>Base URL (Anthropic):</strong> https://jj-ai-gateway.onrender.com</div>
+                <div><strong>Base URL (OpenAI):</strong> https://jj-ai-gateway.onrender.com/v1</div>
+                <div><strong>API Key:</strong> sk-gw-your-api-key</div>
+                <div><strong>Model:</strong> claude-3-7-sonnet-20250219 or astra or sol</div>
+                <button class="code-copy-btn" data-copy="https://jj-ai-gateway.onrender.com">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>Copy Base URL</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- cURL Examples -->
+            <div class="guide-pane" id="guide-curl" style="display: none;">
+              <h3>Direct HTTP / cURL Commands</h3>
+              <p style="color: var(--text-muted); margin: 8px 0 16px;">Test your connection in seconds using any terminal:</p>
+              
+              <div style="margin-bottom: 16px;">
+                <p style="color: #94a3b8; font-weight: 600; margin-bottom: 6px;">1. OpenAI Chat Completions (Astra / Sol):</p>
+                <div class="code-block">
+                  <pre><code style="color: #e2e8f0;">curl https://jj-ai-gateway.onrender.com/v1/chat/completions \
+  -H <span style="color: #a7f3d0;">"Content-Type: application/json"</span> \
+  -H <span style="color: #a7f3d0;">"Authorization: Bearer sk-gw-your-api-key"</span> \
+  -d <span style="color: #a7f3d0;">'{
+    "model": "astra",
+    "messages": [{"role": "user", "content": "Hello AI Gateway!"}],
+    "stream": false
+  }'</span></code></pre>
+                  <button class="code-copy-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span>Copy Command</span>
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <p style="color: #94a3b8; font-weight: 600; margin-bottom: 6px;">2. Anthropic Messages API (Claude 3.7 Sonnet):</p>
+                <div class="code-block">
+                  <pre><code style="color: #e2e8f0;">curl https://jj-ai-gateway.onrender.com/v1/messages \
+  -H <span style="color: #a7f3d0;">"Content-Type: application/json"</span> \
+  -H <span style="color: #a7f3d0;">"x-api-key: sk-gw-your-api-key"</span> \
+  -H <span style="color: #a7f3d0;">"anthropic-version: 2023-06-01"</span> \
+  -d <span style="color: #a7f3d0;">'{
+    "model": "claude-3-7-sonnet-20250219",
+    "max_tokens": 1024,
+    "messages": [{"role": "user", "content": "Hello Claude!"}]
+  }'</span></code></pre>
+                  <button class="code-copy-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span>Copy Command</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -371,190 +746,37 @@
           <div class="workflow-card">
             <div class="workflow-num">01</div>
             <h3>Create an Account</h3>
-            <p>Register an account on our platform dashboard in seconds. No credit check or phone verification required.</p>
+            <p>Register on our platform dashboard in seconds. No phone verification or complex KYC required.</p>
           </div>
 
           <div class="workflow-card">
             <div class="workflow-num">02</div>
             <h3>Top Up Your Balance</h3>
-            <p>Add funds to your platform account balance. Your balance remains valid permanently without expiration.</p>
+            <p>Purchase a CDK activation key from our store and redeem it in your dashboard. Balance never expires.</p>
           </div>
 
           <div class="workflow-card">
             <div class="workflow-num">03</div>
             <h3>Generate Your API Key</h3>
-            <p>Create a secure gateway API key (<code>sk-gw-...</code>) with customized spending limits and permissions.</p>
+            <p>Create a secure gateway API key (<code>sk-gw-...</code>) with customized spending limits.</p>
           </div>
 
           <div class="workflow-card">
             <div class="workflow-num">04</div>
             <h3>Route Through Pools</h3>
-            <p>Point Cursor, NextChat, or your code to our endpoint and choose the pool multiplier that fits your needs.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Client Integration & Setup Guides -->
-    <section class="section" id="quickstart">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge badge-primary section-badge">1-Minute Setup</span>
-          <h2 class="section-title">Drop-in Compatible With Your Tools</h2>
-          <p class="section-subtitle">No code refactoring required. Simply update your API Base URL and start coding.</p>
-        </div>
-
-        <div class="guide-container">
-          <div class="guide-nav">
-            <div class="guide-nav-item active" data-guide="cursor">Cursor IDE</div>
-            <div class="guide-nav-item" data-guide="nextchat">NextChat / Chatbox</div>
-            <div class="guide-nav-item" data-guide="python">Python SDK</div>
-            <div class="guide-nav-item" data-guide="nodejs">Node.js SDK</div>
-            <div class="guide-nav-item" data-guide="curl">cURL</div>
-            <div class="guide-nav-item" data-guide="ccswitch">CCSwitch / Cockpit</div>
-          </div>
-
-          <div class="guide-content">
-            <!-- Cursor IDE -->
-            <div class="guide-pane" id="guide-cursor">
-              <h3>Configure Cursor IDE in 30 Seconds</h3>
-              <p style="color: var(--text-muted); margin: 8px 0 16px;">Supercharge Cursor with OpenAI Astra and Sol:</p>
-              <ol style="margin-left: 20px; color: var(--text-muted); line-height: 1.8;">
-                <li>Open Cursor <strong>Settings</strong> &rarr; <strong>Models</strong>.</li>
-                <li>Disable "Use built-in OpenAI API key".</li>
-                <li>Toggle on <strong>OpenAI API Key</strong> and paste your Gateway API key (<code>sk-gw-...</code>).</li>
-                <li>Click <strong>Override OpenAI Base URL</strong> and enter:</li>
-              </ol>
-              <div class="code-block">
-                <code>https://jj-ai-gateway.onrender.com/v1</code>
-                <button class="code-copy-btn" data-copy="https://jj-ai-gateway.onrender.com/v1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy</span>
-                </button>
-              </div>
-              <p style="color: var(--text-muted); font-size: 0.9rem;">
-                💡 <em>Tip: Add <code>astra</code> or <code>sol</code> in Cursor's model selector!</em>
-              </p>
-            </div>
-
-            <!-- NextChat / Chatbox -->
-            <div class="guide-pane" id="guide-nextchat" style="display: none;">
-              <h3>Configure NextChat or Chatbox</h3>
-              <p style="color: var(--text-muted); margin: 8px 0 16px;">Works seamlessly with all modern desktop and web AI chat applications:</p>
-              <div class="code-block">
-                <div><strong>Provider:</strong> OpenAI</div>
-                <div><strong>Endpoint (Base URL):</strong> https://jj-ai-gateway.onrender.com/v1</div>
-                <div><strong>API Key:</strong> sk-gw-your-api-key</div>
-                <div><strong>Model:</strong> astra or sol</div>
-                <button class="code-copy-btn" data-copy="https://jj-ai-gateway.onrender.com/v1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy URL</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Python SDK -->
-            <div class="guide-pane" id="guide-python" style="display: none;">
-              <h3>Official Python OpenAI SDK</h3>
-              <p style="color: var(--text-muted); margin: 8px 0 16px;">Initialize the official OpenAI library with our custom base URL:</p>
-              <div class="code-block">
-                <pre><code style="color: #e2e8f0;"><span style="color: #f472b6;">from</span> openai <span style="color: #f472b6;">import</span> OpenAI
-
-client = OpenAI(
-    api_key=<span style="color: #a7f3d0;">"sk-gw-your-api-key"</span>,
-    base_url=<span style="color: #a7f3d0;">"https://jj-ai-gateway.onrender.com/v1"</span>
-)
-
-response = client.chat.completions.create(
-    model=<span style="color: #a7f3d0;">"astra"</span>,
-    messages=[
-        {<span style="color: #38bdf8;">"role"</span>: <span style="color: #a7f3d0;">"user"</span>, <span style="color: #38bdf8;">"content"</span>: <span style="color: #a7f3d0;">"Build an autonomous agent for code testing."</span>}
-    ],
-    stream=<span style="color: #818cf8;">True</span>
-)
-
-<span style="color: #f472b6;">for</span> chunk <span style="color: #f472b6;">in</span> response:
-    content = chunk.choices[<span style="color: #fcd34d;">0</span>].delta.content <span style="color: #f472b6;">or</span> <span style="color: #a7f3d0;">""</span>
-    print(content, end=<span style="color: #a7f3d0;">""</span>, flush=<span style="color: #818cf8;">True</span>)</code></pre>
-                <button class="code-copy-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy Code</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Node.js SDK -->
-            <div class="guide-pane" id="guide-nodejs" style="display: none;">
-              <h3>Official Node.js / TypeScript SDK</h3>
-              <p style="color: var(--text-muted); margin: 8px 0 16px;">Works with the standard npm <code>openai</code> package:</p>
-              <div class="code-block">
-                <pre><code style="color: #e2e8f0;"><span style="color: #f472b6;">import</span> OpenAI <span style="color: #f472b6;">from</span> <span style="color: #a7f3d0;">'openai'</span>;
-
-<span style="color: #818cf8;">const</span> openai = <span style="color: #f472b6;">new</span> OpenAI({
-  apiKey: <span style="color: #a7f3d0;">'sk-gw-your-api-key'</span>,
-  baseURL: <span style="color: #a7f3d0;">'https://jj-ai-gateway.onrender.com/v1'</span>,
-});
-
-<span style="color: #818cf8;">const</span> stream = <span style="color: #f472b6;">await</span> openai.chat.completions.create({
-  model: <span style="color: #a7f3d0;">'sol'</span>,
-  messages: [{ role: <span style="color: #a7f3d0;">'user'</span>, content: <span style="color: #a7f3d0;">'Generate a high-performance caching layer in TypeScript'</span> }],
-  stream: <span style="color: #818cf8;">true</span>,
-});
-
-<span style="color: #f472b6;">for await</span> (<span style="color: #818cf8;">const</span> chunk <span style="color: #f472b6;">of</span> stream) {
-  process.stdout.write(chunk.choices[<span style="color: #fcd34d;">0</span>]?.delta?.content || <span style="color: #a7f3d0;">''</span>);
-}</code></pre>
-                <button class="code-copy-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy Code</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- cURL -->
-            <div class="guide-pane" id="guide-curl" style="display: none;">
-              <h3>Direct HTTP / cURL Command</h3>
-              <p style="color: var(--text-muted); margin: 8px 0 16px;">Test your connection in seconds using any terminal:</p>
-              <div class="code-block">
-                <pre><code style="color: #e2e8f0;">curl https://jj-ai-gateway.onrender.com/v1/chat/completions \
-  -H <span style="color: #a7f3d0;">"Content-Type: application/json"</span> \
-  -H <span style="color: #a7f3d0;">"Authorization: Bearer sk-gw-your-api-key"</span> \
-  -d <span style="color: #a7f3d0;">'{
-    "model": "astra",
-    "messages": [{"role": "user", "content": "Hello AI Gateway!"}],
-    "stream": false
-  }'</span></code></pre>
-                <button class="code-copy-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  <span>Copy Command</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- CCSwitch / Cockpit -->
-            <div class="guide-pane" id="guide-ccswitch" style="display: none;">
-              <h3>CCSwitch & Cockpit Desktop AI Agents</h3>
-              <p style="color: var(--text-muted); margin: 8px 0 16px;">Instant setup with modern multi-agent desktop managers:</p>
-              <ol style="margin-left: 20px; color: var(--text-muted); line-height: 1.8;">
-                <li>Open <strong>CCSwitch</strong> or <strong>Cockpit</strong>.</li>
-                <li>Click <strong>Add Provider</strong> &rarr; Select <strong>Custom OpenAI</strong>.</li>
-                <li>Base URL: <code>https://jj-ai-gateway.onrender.com/v1</code></li>
-                <li>Paste your Gateway API key.</li>
-                <li>Save and test connection — models populate automatically!</li>
-              </ol>
-            </div>
+            <p>Point Claude Code, Cursor, or your backend to our endpoint and choose the pool multiplier that fits your needs.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="section" id="faq" style="background: rgba(0, 0, 0, 0.2);">
+    <section class="section" id="faq">
       <div class="container">
         <div class="section-header">
           <span class="badge badge-primary section-badge">Got Questions?</span>
           <h2 class="section-title">Frequently Asked Questions</h2>
-          <p class="section-subtitle">Everything you need to know about our OpenAI routing pools and account balance system.</p>
+          <p class="section-subtitle">Everything you need to know about our routing pools, account balance system, and tool integration.</p>
         </div>
 
         <div class="faq-list">
@@ -564,27 +786,34 @@ response = client.chat.completions.create(
               <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-              Our service operates on a pay-as-you-go balance system. Simply register an account on our platform and top up your balance. Your balance is debited in real time based strictly on the tokens you use and your chosen pool multiplier. Tokens and balance never expire.
+              Our service operates on a pay-as-you-go balance system. Simply register an account on our platform and redeem a CDK token code. Your balance is debited in real time based strictly on the tokens you use and your chosen pool multiplier. Tokens and balance never expire.
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question">
-              <span>What are the 4 routing pools and how do they differ?</span>
+              <span>What are the 6 routing pools and how do they differ?</span>
               <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-              We offer 4 distinct OpenAI routing pools: <strong>0.21x Starter Pool</strong> (promotional quota for fast automated operations), <strong>0.32x Plus Pool</strong> (high-throughput development and coding workflows), <strong>0.50x Pro Pool</strong> (featuring <strong>Sol</strong> for deep reasoning, mathematics, and STEM architecture), and <strong>0.75x Flagship Pool</strong> (featuring <strong>Astra</strong> for frontier intelligence and multi-step agentic workflows).
+              We offer 6 distinct routing channels:
+              <br><br>
+              <strong>1. 0.16x Starter Pool:</strong> Ultra-economical promotional quota for fast automated operations and lightweight models (<code>gpt-4o-mini</code>).<br>
+              <strong>2. 0.325x Plus Pool:</strong> High-throughput development and coding workflows (<code>gpt-4o</code>).<br>
+              <strong>3. 0.45x Pro Reasoning Pool:</strong> Featuring <strong>Sol</strong> and <strong>Terra</strong> for deep mathematical and algorithmic reasoning.<br>
+              <strong>4. 0.45x Flagship Pro Pool:</strong> Featuring <strong>Astra</strong>, <strong>o1</strong>, and <strong>o3-mini</strong> for frontier multi-step agentic workflows.<br>
+              <strong>5. 0.24x Claude Standard Pool:</strong> Comprehensive Anthropic suite featuring <strong>Claude Opus 5</strong>, <strong>Sonnet 5</strong>, and <strong>Fable 5</strong>.<br>
+              <strong>6. 3.00x Claude Max Pool:</strong> Top-tier flagship channel for <strong>Claude 3.7 Sonnet</strong> with full hybrid thinking support for Claude Code CLI and complex development.
             </div>
           </div>
 
           <div class="faq-item">
             <div class="faq-question">
-              <span>When will Anthropic Claude models be available?</span>
+              <span>Can I use Claude Code CLI with AI Gateway?</span>
               <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-              Claude 3.5 Sonnet, Claude 3.5 Haiku, and Claude Opus integration is currently in testing and will be launched soon. Watch our announcements or check back on the dashboard for updates.
+              Yes! AI Gateway has full native support for Anthropic's Messages API (<code>/v1/messages</code> and <code>/messages</code>). Simply set <code>export ANTHROPIC_BASE_URL="https://jj-ai-gateway.onrender.com"</code> and <code>export ANTHROPIC_API_KEY="sk-gw-your-api-key"</code> in your shell, and run <code>claude</code>.
             </div>
           </div>
 
@@ -594,7 +823,7 @@ response = client.chat.completions.create(
               <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-              When using tools like Cursor IDE that repeatedly send the same workspace files or system prompts, OpenAI prompt caching discounts apply automatically, significantly reducing the billed token count on repeated context.
+              When using tools like Cursor IDE or Claude Code that repeatedly send the same workspace files or system prompts, prompt caching discounts apply automatically, significantly reducing the billed token count on repeated context.
             </div>
           </div>
         </div>
@@ -605,11 +834,11 @@ response = client.chat.completions.create(
     <section class="cta-banner">
       <div class="container">
         <div class="cta-box">
-          <h2 class="cta-title">Start Building With High-Speed OpenAI Pools</h2>
-          <p class="cta-desc">Top up your balance in seconds and connect your IDE or chat application to 0.21x, 0.32x, 0.50x, or 0.75x pools.</p>
+          <h2 class="cta-title">Start Building With High-Speed AI Pools</h2>
+          <p class="cta-desc">Top up your balance in seconds and connect your IDE, CLI, or backend to 6 dedicated high-performance routing pools.</p>
           <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-            <a href="#pools" class="btn btn-primary btn-lg">Explore Routing Pools</a>
-            <a href="#how-it-works" class="btn btn-outline btn-lg">How to Top Up</a>
+            <a href="#pools" class="btn btn-primary btn-lg">Explore 6 Routing Pools</a>
+            <a href="#quickstart" class="btn btn-outline btn-lg">View Integration Guides</a>
           </div>
         </div>
       </div>
@@ -629,29 +858,30 @@ response = client.chat.completions.create(
             <span>AI Gateway</span>
           </div>
           <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 320px; line-height: 1.6;">
-            High-performance OpenAI API aggregation platform with transparent pool multipliers (0.21x, 0.32x, 0.50x, 0.75x) and pay-as-you-go balance billing.
+            High-performance AI API aggregation platform with transparent pool multipliers (0.16x – 3.00x) for OpenAI Astra, Sol, and Anthropic Claude.
           </p>
         </div>
 
         <div class="footer-col">
-          <h4>OpenAI Pools</h4>
+          <h4>Routing Pools</h4>
           <ul>
-            <li><a href="#pools">0.21x Starter Pool</a></li>
-            <li><a href="#pools">0.32x Plus Pool</a></li>
-            <li><a href="#pools">0.50x Pro Reasoning</a></li>
-            <li><a href="#pools">0.75x Flagship Pro</a></li>
-            <li><a href="#pools">Claude APIs (Coming Soon)</a></li>
+            <li><a href="#pools">0.16x Starter Pool</a></li>
+            <li><a href="#pools">0.325x Plus Pool</a></li>
+            <li><a href="#pools">0.45x Sol Reasoning</a></li>
+            <li><a href="#pools">0.45x Astra Flagship</a></li>
+            <li><a href="#pools">0.24x Claude Standard</a></li>
+            <li><a href="#pools">3.00x Claude Max</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Integration</h4>
           <ul>
+            <li><a href="#quickstart">Claude Code CLI</a></li>
             <li><a href="#quickstart">Cursor IDE</a></li>
-            <li><a href="#quickstart">NextChat / Chatbox</a></li>
-            <li><a href="#quickstart">Python SDK</a></li>
-            <li><a href="#quickstart">Node.js SDK</a></li>
-            <li><a href="#quickstart">CCSwitch & Cockpit</a></li>
+            <li><a href="#quickstart">Anthropic SDKs</a></li>
+            <li><a href="#quickstart">OpenAI SDKs</a></li>
+            <li><a href="#quickstart">Cline & Roo-Code</a></li>
           </ul>
         </div>
 
@@ -669,7 +899,7 @@ response = client.chat.completions.create(
       <div class="footer-bottom">
         <div>© 2026 AI Gateway. All rights reserved.</div>
         <div style="color: var(--text-dim); font-size: 0.85rem;">
-          OpenAI Routing Pools: 0.21x / 0.32x / 0.50x / 0.75x · Balance Never Expires.
+          Routing Pools: 0.16x / 0.325x / 0.45x / 0.24x / 3.00x · Balance Never Expires.
         </div>
       </div>
     </div>
