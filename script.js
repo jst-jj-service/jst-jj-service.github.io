@@ -105,34 +105,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Interactive Quota Calculator — No Original Price, 4 Pools Only
+  // 6. Interactive Quota Calculator — 6 Transparent Routing Pools
   const calcTokensInput = document.getElementById('calcTokens');
   const calcTierSelect = document.getElementById('calcTier');
   const calcDeductedDisplay = document.getElementById('calcDeductedTokens');
   const calcMultiplierDisplay = document.getElementById('calcMultiplierDisplay');
   const calcSummaryDisplay = document.getElementById('calcSummaryText');
 
-  // Exact 4 Pools: 0.21, 0.32, 0.5, 0.75 (All OpenAI)
+  // Exact 6 Pools: OpenAI (0.16x, 0.325x, 0.45x, 0.45x) & Claude (0.24x, 3.00x)
   const POOL_RATES = {
-    '0.21': {
-      multiplier: 0.21,
-      name: 'Starter Pool (0.21x)',
-      description: 'Promotional Quota Tier'
+    '0.1625': {
+      multiplier: 0.1625,
+      displayMultiplier: '0.16x',
+      name: 'Starter Pool (0.16x)',
+      description: 'gpt-4o-mini & lightweight automation'
     },
-    '0.32': {
-      multiplier: 0.32,
-      name: 'Plus Pool (0.32x)',
-      description: 'Plus Development Tier'
+    '0.325': {
+      multiplier: 0.325,
+      displayMultiplier: '0.325x',
+      name: 'Plus Pool (0.325x)',
+      description: 'gpt-4o & daily coding assistant workflows'
     },
-    '0.5': {
-      multiplier: 0.50,
-      name: 'Pro Reasoning Pool (0.50x)',
-      description: 'Sol Reasoning Model'
+    '0.45-pro': {
+      multiplier: 0.45,
+      displayMultiplier: '0.45x',
+      name: 'Pro Reasoning Pool (0.45x)',
+      description: 'Sol & Terra deep reasoning suite'
     },
-    '0.75': {
-      multiplier: 0.75,
-      name: 'Flagship Pro Pool (0.75x)',
-      description: 'Astra Flagship Model'
+    '0.45-flagship': {
+      multiplier: 0.45,
+      displayMultiplier: '0.45x',
+      name: 'Flagship Pro Pool (0.45x)',
+      description: 'Astra & OpenAI o1 / o3-mini'
+    },
+    '0.24': {
+      multiplier: 0.24,
+      displayMultiplier: '0.24x',
+      name: 'Claude Standard Pool (0.24x)',
+      description: 'Claude Opus 5, Sonnet 5, and Fable 5'
+    },
+    '3.00': {
+      multiplier: 3.00,
+      displayMultiplier: '3.00x',
+      name: 'Claude Max Pool (3.00x)',
+      description: 'Claude 3.7 Sonnet (Hybrid Thinking) & Claude Code'
     }
   };
 
@@ -141,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const millionTokens = Math.max(0.1, parseFloat(calcTokensInput.value) || 1);
     const selectedKey = calcTierSelect.value;
-    const pool = POOL_RATES[selectedKey] || POOL_RATES['0.32'];
+    const pool = POOL_RATES[selectedKey] || POOL_RATES['0.325'];
 
     const rawTokens = millionTokens * 1000000;
     const effectiveTokensDeducted = Math.round(rawTokens * pool.multiplier);
@@ -151,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (calcMultiplierDisplay) {
-      calcMultiplierDisplay.textContent = `${pool.multiplier}x Multiplier`;
+      calcMultiplierDisplay.textContent = `${pool.displayMultiplier} Multiplier`;
     }
 
     if (calcSummaryDisplay) {
