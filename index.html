@@ -141,16 +141,32 @@
     <section class="section" id="pools">
       <div class="container">
         <div class="section-header">
-          <span class="badge badge-primary section-badge">⚡ Transparent Multipliers</span>
+          <span class="badge badge-primary section-badge">⚡ Transparent Multipliers & Stability Architecture</span>
           <h2 class="section-title">Select Your Routing Pool</h2>
           <p class="section-subtitle">Top up your balance on our platform and route your requests through the pool that best matches your model preference and workload speed.</p>
+          
+          <!-- Stability Architecture Callout Banner -->
+          <div style="margin-top: 24px; background: rgba(79, 70, 229, 0.12); border: 1px solid rgba(99, 102, 241, 0.35); border-radius: 12px; padding: 20px 24px; text-align: left; max-width: 960px; margin-left: auto; margin-right: auto;">
+            <div style="display: flex; align-items: flex-start; gap: 14px;">
+              <span style="font-size: 1.6rem; line-height: 1;">🛡️</span>
+              <div>
+                <h4 style="color: #ffffff; font-size: 1.05rem; font-weight: 700; margin-bottom: 6px;">Frontier Models on All Tiers with Zero-Downtime Cascading Auto-Failover</h4>
+                <p style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6; margin: 0;">
+                  <strong>All 6 channels support frontier models</strong> (Astra, Sol, Claude 3.7 Sonnet, Claude Opus 5). Distinct pricing tiers reflect <strong>upstream stability & queue priority</strong>: Economy tiers (0.16x / 0.24x) deliver massive cost savings, but may occasionally experience queue delays or temporary maintenance during upstream peak hours. High-stability tiers (0.45x / 3.00x) guarantee 99.9% uptime SLAs and dedicated enterprise concurrency. <strong>If an economy channel is temporarily offline, our gateway automatically cascades to the next tier seamlessly so your requests never drop!</strong>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="pools-grid">
           <!-- Pool 1: 0.16x Starter Pool -->
           <div class="pool-card">
             <div>
-              <span class="badge" style="border-color: rgba(16,185,129,0.3); color: #34d399; background: rgba(16,185,129,0.1);">OpenAI Starter</span>
+              <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 12px;">
+                <span class="badge" style="border-color: rgba(16,185,129,0.3); color: #34d399; background: rgba(16,185,129,0.1);">OpenAI Starter</span>
+                <span class="badge" style="border-color: rgba(148,163,184,0.3); color: #94a3b8; background: rgba(148,163,184,0.1);">Economy (95% SLA)</span>
+              </div>
               <div class="pool-rate-box">
                 <div class="pool-multiplier" style="color: #34d399;">0.16x</div>
                 <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
@@ -159,9 +175,10 @@
               
               <div class="pool-models-title">Available Models</div>
               <ul class="pool-models-list">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>astra</code> / <code>sol</code> Frontier models at 0.16x</li>
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>gpt-4o-mini</code> Lightweight flagship</li>
-                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>gpt-5.4-mini</code> Next-gen mini suite</li>
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>gpt-5.5</code> Balanced efficiency</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <small style="color: #94a3b8;">Auto-fails over to Plus if offline</small></li>
               </ul>
             </div>
             <a href="#how-it-works" class="btn btn-outline" style="width: 100%;">Use 0.16x Pool</a>
@@ -170,7 +187,10 @@
           <!-- Pool 2: 0.325x Plus Pool -->
           <div class="pool-card">
             <div>
-              <span class="badge" style="border-color: rgba(6,182,212,0.3); color: #38bdf8; background: rgba(6,182,212,0.1);">OpenAI Plus</span>
+              <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 12px;">
+                <span class="badge" style="border-color: rgba(6,182,212,0.3); color: #38bdf8; background: rgba(6,182,212,0.1);">OpenAI Plus</span>
+                <span class="badge" style="border-color: rgba(6,182,212,0.4); color: #38bdf8; background: rgba(6,182,212,0.15);">Standard (98.5% SLA)</span>
+              </div>
               <div class="pool-rate-box">
                 <div class="pool-multiplier" style="color: #38bdf8;">0.325x</div>
                 <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
@@ -180,8 +200,9 @@
               <div class="pool-models-title">Available Models</div>
               <ul class="pool-models-list">
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>gpt-4o</code> Full flagship intelligence</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>astra</code> / <code>sol</code> / <code>gpt-6</code> Frontier suite</li>
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>chatgpt-4o-latest</code> Dynamic release</li>
-                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>gpt-5.6</code> Enhanced core model</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <small style="color: #94a3b8;">Auto-fails over to Pro if offline</small></li>
               </ul>
             </div>
             <a href="#how-it-works" class="btn btn-outline" style="width: 100%;">Use 0.325x Pool</a>
@@ -191,7 +212,10 @@
           <div class="pool-card featured">
             <span class="badge badge-primary pool-badge-top">⭐ Sol Reasoning</span>
             <div>
-              <span class="badge" style="border-color: rgba(245,158,11,0.3); color: #fcd34d; background: rgba(245,158,11,0.1);">OpenAI Pro (Sol)</span>
+              <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 12px;">
+                <span class="badge" style="border-color: rgba(245,158,11,0.3); color: #fcd34d; background: rgba(245,158,11,0.1);">OpenAI Pro (Sol)</span>
+                <span class="badge" style="border-color: rgba(245,158,11,0.5); color: #fcd34d; background: rgba(245,158,11,0.2);">High-Stability (99.9% SLA)</span>
+              </div>
               <div class="pool-rate-box">
                 <div class="pool-multiplier" style="color: #fcd34d;">0.45x</div>
                 <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
@@ -201,8 +225,9 @@
               <div class="pool-models-title">Available Models</div>
               <ul class="pool-models-list">
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>sol</code> / <code>gpt-5.6-sol</code> Deep reasoning</li>
-                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>terra</code> / <code>gpt-5.6-terra</code> Extended context</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>terra</code> / <code>luna</code> / <code>gpt-6</code> Frontier suite</li>
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>o1-mini</code> Reasoning preview</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <small style="color: #34d399;">Enterprise priority queues (unthrottled)</small></li>
               </ul>
             </div>
             <a href="#how-it-works" class="btn btn-primary" style="width: 100%;">Use 0.45x Sol Pool</a>
@@ -211,7 +236,10 @@
           <!-- Pool 4: 0.45x Flagship Pro Pool (Astra) -->
           <div class="pool-card">
             <div>
-              <span class="badge" style="border-color: rgba(139,92,246,0.4); color: #a78bfa; background: rgba(139,92,246,0.15);">OpenAI Flagship (Astra)</span>
+              <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 12px;">
+                <span class="badge" style="border-color: rgba(139,92,246,0.4); color: #a78bfa; background: rgba(139,92,246,0.15);">OpenAI Flagship (Astra)</span>
+                <span class="badge" style="border-color: rgba(139,92,246,0.6); color: #c4b5fd; background: rgba(139,92,246,0.25);">High-Stability (99.9% SLA)</span>
+              </div>
               <div class="pool-rate-box">
                 <div class="pool-multiplier" style="color: #a78bfa;">0.45x</div>
                 <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
@@ -223,6 +251,7 @@
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>astra</code> / <code>gpt-6-astra</code> Frontier flagship</li>
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>o1</code> / <code>o1-2024-12-17</code> Deep thinking</li>
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>o3-mini</code> Ultra-fast reasoning</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <small style="color: #34d399;">Enterprise priority queues (unthrottled)</small></li>
               </ul>
             </div>
             <a href="#how-it-works" class="btn btn-outline" style="width: 100%;">Use 0.45x Astra Pool</a>
@@ -231,7 +260,10 @@
           <!-- Pool 5: 0.24x Claude Standard Pool -->
           <div class="pool-card">
             <div>
-              <span class="badge" style="border-color: rgba(244,114,182,0.3); color: #f472b6; background: rgba(244,114,182,0.1);">Claude Standard</span>
+              <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 12px;">
+                <span class="badge" style="border-color: rgba(244,114,182,0.3); color: #f472b6; background: rgba(244,114,182,0.1);">Claude Standard</span>
+                <span class="badge" style="border-color: rgba(148,163,184,0.3); color: #94a3b8; background: rgba(148,163,184,0.1);">Economy (95% SLA)</span>
+              </div>
               <div class="pool-rate-box">
                 <div class="pool-multiplier" style="color: #f472b6;">0.24x</div>
                 <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
@@ -243,6 +275,7 @@
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>claude-opus-5</code> Premier analysis</li>
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>claude-sonnet-5</code> Creative coding</li>
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>fable</code> / <code>claude-fable-5</code> Narrative</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg> <small style="color: #94a3b8;">Auto-fails over to Claude Max if offline</small></li>
               </ul>
             </div>
             <a href="#how-it-works" class="btn btn-outline" style="width: 100%;">Use 0.24x Claude Pool</a>
@@ -252,7 +285,10 @@
           <div class="pool-card featured" style="border-color: rgba(236,72,153,0.6); background: linear-gradient(180deg, rgba(236,72,153,0.12) 0%, rgba(17, 24, 39, 0.85) 100%);">
             <span class="badge badge-primary pool-badge-top" style="background: rgba(236,72,153,0.25); color: #fbcfe8; border-color: rgba(236,72,153,0.5);">🔥 Claude 3.7 Thinking</span>
             <div>
-              <span class="badge" style="border-color: rgba(236,72,153,0.4); color: #f472b6; background: rgba(236,72,153,0.15);">Claude Max</span>
+              <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 12px;">
+                <span class="badge" style="border-color: rgba(236,72,153,0.4); color: #f472b6; background: rgba(236,72,153,0.15);">Claude Max</span>
+                <span class="badge" style="border-color: rgba(236,72,153,0.6); color: #fbcfe8; background: rgba(236,72,153,0.25);">High-Stability (99.9% SLA)</span>
+              </div>
               <div class="pool-rate-box">
                 <div class="pool-multiplier" style="color: #f472b6;">3.00x</div>
                 <p style="color: var(--text-dim); font-size: 0.85rem;">Token Deduction Multiplier</p>
@@ -263,7 +299,8 @@
               <ul class="pool-models-list">
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>claude-3-7-sonnet-20250219</code> Hybrid thinking</li>
                 <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>claude-3-5-sonnet-20241022</code> High-accuracy code</li>
-                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>claude-max</code> Max unthrottled quota</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f472b6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <code>claude-opus-5</code> / <code>claude-sonnet-5</code> Full suite</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <small style="color: #34d399;">Dedicated Claude Code priority queue</small></li>
               </ul>
             </div>
             <a href="#how-it-works" class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);">Use 3.00x Claude Max</a>
@@ -317,6 +354,7 @@
               <tr>
                 <th>Model Identifier</th>
                 <th>Routing Pool</th>
+                <th>Channel Stability & SLA</th>
                 <th>Deduction Multiplier</th>
                 <th>Context Window</th>
                 <th>Target Use Case</th>
@@ -326,37 +364,42 @@
               <!-- Claude Max Tier -->
               <tr class="pricing-row" data-tier="claude-max">
                 <td class="model-name-cell"><strong>claude-3-7-sonnet-20250219</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(236,72,153,0.3); background: rgba(236,72,153,0.1);">Claude Max (3.00x)</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(236,72,153,0.3); background: rgba(236,72,153,0.1);">Claude Max</span></td>
+                <td><span class="badge" style="color: #fbcfe8; border-color: rgba(236,72,153,0.6); background: rgba(236,72,153,0.25);">High-Stability (99.9% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #f472b6;">3.00x</span></td>
                 <td>200K</td>
-                <td>Premier Anthropic hybrid reasoning & coding intelligence for Claude Code CLI and complex agents</td>
+                <td>Premier Anthropic hybrid reasoning & coding intelligence with dedicated Claude Code priority lane</td>
               </tr>
               <tr class="pricing-row" data-tier="claude-max">
                 <td class="model-name-cell"><strong>claude-3-5-sonnet-20241022</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(236,72,153,0.3); background: rgba(236,72,153,0.1);">Claude Max (3.00x)</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(236,72,153,0.3); background: rgba(236,72,153,0.1);">Claude Max</span></td>
+                <td><span class="badge" style="color: #fbcfe8; border-color: rgba(236,72,153,0.6); background: rgba(236,72,153,0.25);">High-Stability (99.9% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #f472b6;">3.00x</span></td>
                 <td>200K</td>
-                <td>High-precision coding, multi-turn architecture refactoring, and tool calling</td>
+                <td>High-precision coding, multi-turn architecture refactoring, and unthrottled tool calling</td>
               </tr>
 
               <!-- Astra Tier -->
               <tr class="pricing-row" data-tier="astra">
                 <td class="model-name-cell"><strong>astra / gpt-6-astra</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">Flagship Pro Pool (0.45x)</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">Flagship Pro Pool</span></td>
+                <td><span class="badge" style="color: #c4b5fd; border-color: rgba(139,92,246,0.6); background: rgba(139,92,246,0.25);">High-Stability (99.9% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #a78bfa;">0.45x</span></td>
                 <td>200K</td>
                 <td>OpenAI frontier flagship intelligence for sustained multi-step reasoning, agents, and complex coding</td>
               </tr>
               <tr class="pricing-row" data-tier="astra">
                 <td class="model-name-cell"><strong>o1 / o1-2024-12-17</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">Flagship Pro Pool (0.45x)</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">Flagship Pro Pool</span></td>
+                <td><span class="badge" style="color: #c4b5fd; border-color: rgba(139,92,246,0.6); background: rgba(139,92,246,0.25);">High-Stability (99.9% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #a78bfa;">0.45x</span></td>
                 <td>200K</td>
                 <td>Full OpenAI reasoning model for PhD-level mathematics, science, and difficult code algorithms</td>
               </tr>
               <tr class="pricing-row" data-tier="astra">
                 <td class="model-name-cell"><strong>o3-mini</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">Flagship Pro Pool (0.45x)</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #a78bfa; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1);">Flagship Pro Pool</span></td>
+                <td><span class="badge" style="color: #c4b5fd; border-color: rgba(139,92,246,0.6); background: rgba(139,92,246,0.25);">High-Stability (99.9% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #a78bfa;">0.45x</span></td>
                 <td>200K</td>
                 <td>Next-generation high-speed reasoning model optimized for coding competitions and math</td>
@@ -365,55 +408,70 @@
               <!-- Sol Tier -->
               <tr class="pricing-row" data-tier="sol">
                 <td class="model-name-cell"><strong>sol / gpt-5.6-sol</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">Pro Reasoning Pool (0.45x)</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">Pro Reasoning Pool</span></td>
+                <td><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.5); background: rgba(245,158,11,0.2);">High-Stability (99.9% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #fcd34d;">0.45x</span></td>
                 <td>128K</td>
                 <td>High-performance deep reasoning model for competitive coding, STEM analysis, and architecture</td>
               </tr>
               <tr class="pricing-row" data-tier="sol">
                 <td class="model-name-cell"><strong>terra / gpt-5.6-terra</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">Pro Reasoning Pool (0.45x)</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">Pro Reasoning Pool</span></td>
+                <td><span class="badge" style="color: #fcd34d; border-color: rgba(245,158,11,0.5); background: rgba(245,158,11,0.2);">High-Stability (99.9% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #fcd34d;">0.45x</span></td>
                 <td>128K</td>
-                <td>High-concurrency STEM and reasoning workhorse</td>
+                <td>High-concurrency STEM and reasoning workhorse with dedicated priority bandwidth</td>
               </tr>
 
               <!-- Claude Standard Tier -->
               <tr class="pricing-row" data-tier="claude-std">
                 <td class="model-name-cell"><strong>claude-opus-5</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(244,114,182,0.3); background: rgba(244,114,182,0.1);">Claude Standard (0.24x)</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(244,114,182,0.3); background: rgba(244,114,182,0.1);">Claude Standard</span></td>
+                <td><span class="badge" style="color: #94a3b8; border-color: rgba(148,163,184,0.3); background: rgba(148,163,184,0.1);">Economy (95% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #f472b6;">0.24x</span></td>
                 <td>200K</td>
-                <td>Top-tier analysis, deep writing, creative architecture, and thoughtful comprehension</td>
+                <td>Top-tier analysis & deep writing. <em>Note: Peak queue delays possible; auto-fails over to Claude Max</em></td>
               </tr>
               <tr class="pricing-row" data-tier="claude-std">
                 <td class="model-name-cell"><strong>claude-sonnet-5 / fable</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(244,114,182,0.3); background: rgba(244,114,182,0.1);">Claude Standard (0.24x)</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #f472b6; border-color: rgba(244,114,182,0.3); background: rgba(244,114,182,0.1);">Claude Standard</span></td>
+                <td><span class="badge" style="color: #94a3b8; border-color: rgba(148,163,184,0.3); background: rgba(148,163,184,0.1);">Economy (95% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #f472b6;">0.24x</span></td>
                 <td>200K</td>
-                <td>Balanced speed and high intelligence for software engineering and narrative creation</td>
+                <td>Balanced speed & high intelligence for software engineering. Auto-fails over to Claude Max if busy</td>
               </tr>
 
               <!-- Plus Tier -->
               <tr class="pricing-row" data-tier="plus">
                 <td class="model-name-cell"><strong>gpt-4o / chatgpt-4o-latest</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #38bdf8; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">Plus Pool (0.325x)</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #38bdf8; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">Plus Pool</span></td>
+                <td><span class="badge" style="color: #38bdf8; border-color: rgba(6,182,212,0.4); background: rgba(6,182,212,0.15);">Standard (98.5% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #38bdf8;">0.325x</span></td>
                 <td>128K</td>
                 <td>General-purpose multimodal intelligence for high-throughput daily coding in Cursor & VS Code</td>
               </tr>
               <tr class="pricing-row" data-tier="plus">
-                <td class="model-name-cell"><strong>gpt-5.6 / gpt-5.2</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #38bdf8; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">Plus Pool (0.325x)</span></td>
+                <td class="model-name-cell"><strong>astra / sol (Plus Tier)</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #38bdf8; border-color: rgba(6,182,212,0.3); background: rgba(6,182,212,0.1);">Plus Pool</span></td>
+                <td><span class="badge" style="color: #38bdf8; border-color: rgba(6,182,212,0.4); background: rgba(6,182,212,0.15);">Standard (98.5% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #38bdf8;">0.325x</span></td>
                 <td>128K</td>
-                <td>Next-generation conversational and development workhorse suite</td>
+                <td>Access frontier models at 0.325x with balanced standard stability and auto-failover to Pro</td>
               </tr>
 
               <!-- Starter Tier -->
               <tr class="pricing-row" data-tier="starter">
+                <td class="model-name-cell"><strong>astra / sol (Economy)</strong></td>
+                <td class="group-name-cell"><span class="badge" style="color: #34d399; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);">Starter Pool</span></td>
+                <td><span class="badge" style="color: #94a3b8; border-color: rgba(148,163,184,0.3); background: rgba(148,163,184,0.1);">Economy (95% SLA)</span></td>
+                <td><span class="tier-multiplier" style="color: #34d399;">0.16x</span></td>
+                <td>128K</td>
+                <td>Frontier models at maximum discount. <em>Note: Peak queue delays possible; auto-fails over to Plus/Pro</em></td>
+              </tr>
+              <tr class="pricing-row" data-tier="starter">
                 <td class="model-name-cell"><strong>gpt-4o-mini / gpt-5.4-mini</strong></td>
-                <td class="group-name-cell"><span class="badge" style="color: #34d399; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);">Starter Pool (0.16x)</span></td>
+                <td class="group-name-cell"><span class="badge" style="color: #34d399; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);">Starter Pool</span></td>
+                <td><span class="badge" style="color: #94a3b8; border-color: rgba(148,163,184,0.3); background: rgba(148,163,184,0.1);">Economy (95% SLA)</span></td>
                 <td><span class="tier-multiplier" style="color: #34d399;">0.16x</span></td>
                 <td>128K</td>
                 <td>Ultra-economical quota for high-frequency automation, testing pipelines, and lightweight tasks</td>
@@ -814,6 +872,30 @@ response = client.chat.completions.create(
             </div>
             <div class="faq-answer">
               Yes! AI Gateway has full native support for Anthropic's Messages API (<code>/v1/messages</code> and <code>/messages</code>). Simply set <code>export ANTHROPIC_BASE_URL="https://jj-ai-gateway.onrender.com"</code> and <code>export ANTHROPIC_API_KEY="sk-gw-your-api-key"</code> in your shell, and run <code>claude</code>.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Why are there different pricing multipliers if all channels run frontier models?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Every channel on our gateway gives you access to the same frontier architectures (Astra, Sol, Claude 3.7 Sonnet, Claude Opus 5). The pricing tiers differ based on <strong>channel stability, queue priority, and uptime SLA</strong>:
+              <br><br>
+              • <strong>Economy Tiers (0.16x / 0.24x):</strong> High discounts on spot bandwidth. Best for non-critical automation and background agents. During peak upstream traffic, they may experience queue delays or temporary maintenance.<br>
+              • <strong>Standard Tier (0.325x):</strong> Balanced day-to-day stability (98.5% uptime SLA) with reliable throughput for interactive coding in Cursor and VS Code.<br>
+              • <strong>High-Stability Tiers (0.45x / 3.00x):</strong> 99.9% uptime SLA with dedicated unthrottled enterprise bandwidth and priority queues, designed for mission-critical production and Claude Code CLI.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What happens if an economy channel is temporarily offline?</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Our gateway features <strong>Intelligent Cascading Auto-Failover</strong>. If an economy tier channel returns an HTTP 5xx error, 429 rate limit, or experiences a network timeout, the gateway instantly and seamlessly reroutes your request to the next available tier without breaking your connection or dropping your prompt. Your requests always complete with zero disruption.
             </div>
           </div>
 
