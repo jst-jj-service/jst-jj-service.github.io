@@ -45,7 +45,10 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
         <a href="#quickstart" class="btn btn-outline btn-sm">Setup Guide</a>
-        <a href="#pools" class="btn btn-primary btn-sm">Explore Pools</a>
+        <a href="https://jj-ai-dashboard.onrender.com/login" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="border-color: rgba(99,102,241,0.5); color: #c7d2fe;">Sign In</a>
+        <a href="https://jj-ai-dashboard.onrender.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);">
+          <span>Client Dashboard ⚡</span>
+        </a>
       </div>
     </div>
   </header>
@@ -71,9 +74,12 @@
         </p>
 
         <div class="hero-actions">
-          <a href="#pools" class="btn btn-primary btn-lg">
+          <a href="https://jj-ai-dashboard.onrender.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);">
+            <span>Launch Client Dashboard</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+          <a href="#pools" class="btn btn-outline btn-lg">
             <span>Explore 6 Pools</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="#quickstart" class="btn btn-outline btn-lg">
             <span>Integration Guides</span>
@@ -82,6 +88,17 @@
 
         <!-- Quick Base URL Copy Box -->
         <div class="base-url-bar" style="margin-top: 28px;">
+          <div style="display: flex; align-items: center; gap: 10px; overflow: hidden; flex-wrap: wrap;">
+            <span class="base-url-label" style="background: rgba(16,185,129,0.2); color: #6ee7b7;">Web Dashboard</span>
+            <span class="base-url-text">https://jj-ai-dashboard.onrender.com</span>
+          </div>
+          <a href="https://jj-ai-dashboard.onrender.com" target="_blank" rel="noopener" class="btn btn-outline btn-sm copy-btn" style="text-decoration: none;" title="Open Web Dashboard">
+            <span>Open</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+
+        <div class="base-url-bar" style="margin-top: 10px;">
           <div style="display: flex; align-items: center; gap: 10px; overflow: hidden; flex-wrap: wrap;">
             <span class="base-url-label">OpenAI Endpoint</span>
             <span class="base-url-text">https://jj-ai-gateway.onrender.com/v1</span>
@@ -804,19 +821,19 @@ response = client.chat.completions.create(
           <div class="workflow-card">
             <div class="workflow-num">01</div>
             <h3>Create an Account</h3>
-            <p>Register on our platform dashboard in seconds. No phone verification or complex KYC required.</p>
+            <p>Register on our <a href="https://jj-ai-dashboard.onrender.com/register" target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: underline; font-weight: 600;">Client Web Portal</a> in seconds. No phone verification or complex KYC required.</p>
           </div>
 
           <div class="workflow-card">
             <div class="workflow-num">02</div>
             <h3>Top Up Your Balance</h3>
-            <p>Contact admin on WhatsApp (<a href="https://wa.me/60178241445" target="_blank" style="color: #10b981; text-decoration: underline; font-weight: 600;">0178241445</a>) for CDK recharge keys and redeem instantly in your dashboard. Balance never expires.</p>
+            <p>Contact admin on WhatsApp (<a href="https://wa.me/60178241445" target="_blank" style="color: #10b981; text-decoration: underline; font-weight: 600;">0178241445</a>) for CDK recharge keys and redeem instantly in your <a href="https://jj-ai-dashboard.onrender.com/dashboard/payment" target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: underline; font-weight: 600;">Payment Dashboard</a>. Balance never expires.</p>
           </div>
 
           <div class="workflow-card">
             <div class="workflow-num">03</div>
             <h3>Generate Your API Key</h3>
-            <p>Create a secure gateway API key (<code>sk-gw-...</code>) with customized spending limits.</p>
+            <p>Create a secure gateway API key (<code>sk-gw-...</code>) with customized spending limits in your <a href="https://jj-ai-dashboard.onrender.com/dashboard/api-keys" target="_blank" rel="noopener" style="color: #38bdf8; text-decoration: underline; font-weight: 600;">API Keys portal</a>.</p>
           </div>
 
           <div class="workflow-card">
@@ -919,6 +936,9 @@ response = client.chat.completions.create(
           <h2 class="cta-title">Start Building With High-Speed AI Pools</h2>
           <p class="cta-desc">Top up your balance in seconds and connect your IDE, CLI, or backend to 6 dedicated high-performance routing pools.</p>
           <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+            <a href="https://jj-ai-dashboard.onrender.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%); border-color: #4f46e5; box-shadow: 0 4px 14px rgba(79,70,229,0.35);">
+              <span>Open Client Dashboard ⚡</span>
+            </a>
             <a href="https://wa.me/60178241445?text=Hi%2C%20I%20would%20like%20to%20top%20up%20AI%20Gateway%20credits" target="_blank" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-color: #10b981; box-shadow: 0 4px 14px rgba(16,185,129,0.35);">
               <span>WhatsApp Top-Up (0178241445)</span>
             </a>
@@ -973,9 +993,10 @@ response = client.chat.completions.create(
         <div class="footer-col">
           <h4>Platform & Support</h4>
           <ul>
-            <li><a href="#how-it-works">Account Top-Up</a></li>
-            <li><a href="https://t.me/" target="_blank" rel="noopener">Telegram Community</a></li>
-            <li><a href="mailto:support@gateway.local">Email Support</a></li>
+            <li><a href="https://jj-ai-dashboard.onrender.com" target="_blank" rel="noopener">Client Web Dashboard</a></li>
+            <li><a href="https://jj-ai-dashboard.onrender.com/login" target="_blank" rel="noopener">Sign In / Register</a></li>
+            <li><a href="https://jj-ai-dashboard.onrender.com/dashboard/payment" target="_blank" rel="noopener">CDK Redemption</a></li>
+            <li><a href="https://wa.me/60178241445" target="_blank" rel="noopener">WhatsApp (0178241445)</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
